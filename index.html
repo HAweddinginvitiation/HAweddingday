@@ -1,997 +1,1084 @@
+
+
+Вставленный текст.txt
+Документ
+chat plase give the same code but do some corrections
+in translation to russian translate everything for example Հակոբ և Անյա 
+The two photos make in collage style next to each other 
+
+countdown timer make in the way that can be fullly visible on phone 
+
+Make everything by phone style acceptable and visible
+Give correctet whole html code
+
+
+
+
+
+Вставленный текст(1).txt
+Документ
+keep this code only chnage russian and armenian font style make it more minimalist 
+And the phtos of church and restaurand do in medium size on rectangular buttons
+Make everythinc acceptable for phone
+
+/* REPLACE ONLY THESE PARTS IN YOUR CODE */
+
+/* ================= FONTS ================= */
+
+body{
+  font-family:'Tenor Sans', 'Montserrat', sans-serif;
+  background:var(--cream);
+  color:var(--dark);
+  overflow-x:hidden;
+  font-weight:300;
+}
+
+.names{
+  font-family:'Cormorant Garamond', serif;
+  font-size:clamp(52px,12vw,92px);
+  line-height:1.1;
+  letter-spacing:2px;
+  font-weight:400;
+}
+
+.subtitle{
+  font-size:11px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+  font-weight:300;
+}
+
+.invitation-text{
+  max-width:620px;
+  font-size:22px;
+  line-height:1.9;
+  font-family:'Cormorant Garamond', serif;
+  font-weight:300;
+}
+
+.direction-title{
+  font-size:20px;
+  letter-spacing:1px;
+  margin-bottom:12px;
+  font-family:'Tenor Sans', sans-serif;
+  font-weight:400;
+}
+
+.direction-time{
+  font-size:38px;
+  letter-spacing:3px;
+  margin-bottom:22px;
+  font-family:'Cormorant Garamond', serif;
+  font-weight:300;
+}
+
+.count-title{
+  font-family:'Cormorant Garamond', serif;
+  font-size:54px;
+  margin-bottom:35px;
+  font-weight:400;
+}
+
+.footer-text{
+  font-family:'Cormorant Garamond', serif;
+  font-size:28px;
+  letter-spacing:2px;
+}
+
+/* ================= CHURCH & RESTAURANT PHOTOS ================= */
+
+.direction-photo{
+  width:100%;
+  max-width:320px;
+  height:220px;
+  object-fit:cover;
+  border-radius:18px;
+  margin-bottom:24px;
+  border:none;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  transition:.4s;
+}
+
+.direction-photo:hover{
+  transform:translateY(-5px);
+}
+
+/* ================= BUTTONS ================= */
+
+.map-btn{
+  display:inline-block;
+  padding:13px 34px;
+  border-radius:14px;
+  text-decoration:none;
+  color:var(--dark);
+  border:1px solid rgba(0,0,0,.15);
+  transition:.35s;
+  letter-spacing:1px;
+  font-size:11px;
+  background:#fff;
+}
+
+.map-btn:hover{
+  background:var(--dark);
+  color:#fff;
+}
+
+/* ================= PHONE RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+  .section{
+    padding:65px 16px;
+  }
+
+  .names{
+    font-size:58px;
+  }
+
+  .subtitle{
+    font-size:10px;
+    letter-spacing:3px;
+  }
+
+  .date{
+    font-size:17px;
+    letter-spacing:4px;
+  }
+
+  .invitation-text{
+    font-size:18px;
+    line-height:1.8;
+  }
+
+  .calendar-box{
+    padding:28px 16px;
+    border-radius:18px;
+  }
+
+  .month{
+    font-size:20px;
+  }
+
+  .day{
+    font-size:13px;
+  }
+
+  .count-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+  }
+
+  .count-item{
+    padding:18px 6px;
+    border-radius:18px;
+  }
+
+  .count-number{
+    font-size:36px;
+  }
+
+  .count-label{
+    font-size:9px;
+    letter-spacing:1px;
+  }
+
+  .direction-photo{
+    max-width:100%;
+    height:200px;
+    border-radius:16px;
+  }
+
+  .direction-title{
+    font-size:18px;
+  }
+
+  .direction-time{
+    font-size:30px;
+  }
+
+  .collage-wrapper{
+    gap:10px;
+  }
+
+  .collage-photo{
+    width:48%;
+    border-radius:14px;
+  }
+
+  .final-small{
+    font-size:18px;
+    letter-spacing:2px;
+  }
+
+  .final-big{
+    font-size:24px;
+    line-height:1.6;
+    letter-spacing:2px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .names{
+    font-size:48px;
+  }
+
+  .invitation-text{
+    font-size:17px;
+  }
+
+  .count-title{
+    font-size:40px;
+  }
+
+  .count-number{
+    font-size:32px;
+  }
+
+  .direction-photo{
+    height:180px;
+  }
+
+  .collage-photo:first-child{
+    transform:rotate(-2deg);
+  }
+
+  .collage-photo:last-child{
+    transform:rotate(2deg);
+  }
+
+}
+
+so give the whole code
+
 <!DOCTYPE html>
 <html lang="hy">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Հակոբ & Անյա | 17.07.2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Great+Vibes&family=Montserrat:wght@100;200;300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Tenor+Sans&family=Noto+Sans:wght@100;200;300;400;500&family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&family=Tenor+Sans&display=swap" rel="stylesheet">
+
 <style>
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-:root {
-  --cream: #FAF8F5;
-  --warm-white: #FFF9F5;
-  --soft-pink: #F5E6E0;
-  --blush: #F0D5CC;
-  --dark: #1A1A1A;
-  --gray: #8A8A8A;
-  --light-gray: #E8E4E0;
-  --heart-pink: #F2B5C4;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: 'Montserrat', 'Noto Sans', sans-serif;
-  background: var(--cream);
-  color: var(--dark);
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
+:root{
+  --cream:#faf8f5;
+  --white:#ffffff;
+  --soft:#f2e6df;
+  --dark:#171717;
+  --gray:#777;
+  --pink:#e7c2cb;
 }
 
-.lang-switcher {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-  display: flex;
-  gap: 4px;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(12px);
-  border-radius: 30px;
-  padding: 4px;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-  transition: all 0.4s ease;
-}
-.lang-switcher:hover {
-  box-shadow: 0 4px 30px rgba(0,0,0,0.12);
-  transform: translateY(-1px);
-}
-.lang-btn {
-  border: none;
-  background: transparent;
-  padding: 6px 12px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-family: 'Tenor Sans', 'Montserrat', sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  letter-spacing: 1.5px;
-  color: var(--gray);
-  transition: all 0.3s ease;
-}
-.lang-btn.active {
-  background: var(--dark);
-  color: white;
-}
-.lang-btn:hover:not(.active) {
-  color: var(--dark);
+html{
+  scroll-behavior:smooth;
 }
 
-.section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 24px;
-  position: relative;
+body{
+  font-family:'Tenor Sans','Montserrat',sans-serif;
+  background:var(--cream);
+  color:var(--dark);
+  overflow-x:hidden;
+  font-weight:300;
 }
 
-/* HEADER */
-.header-section {
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.header-bg {
-  position: absolute;
-  inset: 0;
-  background: url('https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/7617bfbca30e62f74ca10db162ab343dae72e420/photo_5242604538437509150_y.jpg') center/cover no-repeat;
-  filter: brightness(0.65);
-  transition: transform 8s ease, filter 0.5s ease;
-}
-.header-section:hover .header-bg {
-  transform: scale(1.03);
-  filter: brightness(0.7);
-}
-.header-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.35) 100%);
-}
-.header-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: white;
-  padding: 20px;
-  animation: headerFadeIn 2s ease forwards;
-}
-@keyframes headerFadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.header-subtitle {
-  font-family: 'Tenor Sans', 'Montserrat', sans-serif;
-  font-weight: 300;
-  font-size: 11px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  margin-bottom: 30px;
-  opacity: 0.9;
-}
-.header-names {
-  font-family: 'Great Vibes', cursive;
-  font-size: clamp(52px, 13vw, 96px);
-  line-height: 1.2;
-  margin-bottom: 10px;
-  text-shadow: 0 2px 25px rgba(0,0,0,0.3);
-  transition: transform 0.5s ease;
-}
-.header-names:hover {
-  transform: scale(1.02);
-}
-.header-names .amp {
-  font-size: 0.55em;
-  margin: 0 10px;
-  opacity: 0.85;
-}
-.header-date {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(20px, 4.5vw, 32px);
-  font-weight: 300;
-  letter-spacing: 8px;
-  margin-top: 20px;
-  opacity: 0.95;
-}
-.header-divider {
-  width: 60px;
-  height: 1px;
-  background: rgba(255,255,255,0.6);
-  margin: 25px auto;
-}
-.scroll-hint {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  animation: scrollBounce 2s ease-in-out infinite;
-}
-.scroll-hint svg {
-  width: 24px;
-  height: 24px;
-  stroke: rgba(255,255,255,0.7);
-  fill: none;
-  stroke-width: 1.5;
-}
-@keyframes scrollBounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(10px); }
+/* ================= LANGUAGE ================= */
+
+.lang-switcher{
+  position:fixed;
+  top:15px;
+  right:15px;
+  z-index:999;
+  background:rgba(255,255,255,.9);
+  backdrop-filter:blur(10px);
+  border-radius:30px;
+  padding:4px;
+  display:flex;
+  gap:5px;
+  box-shadow:0 4px 20px rgba(0,0,0,.05);
 }
 
-/* INVITATION TEXT */
-.invitation-section {
-  background: var(--cream);
-  text-align: center;
-  padding: 100px 30px;
-}
-.invitation-section .section-ornament {
-  margin-bottom: 40px;
-  opacity: 0.3;
-}
-.invitation-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(18px, 3.5vw, 24px);
-  font-weight: 400;
-  line-height: 2;
-  max-width: 520px;
-  color: var(--dark);
-  letter-spacing: 0.3px;
-}
-.invitation-divider {
-  width: 40px;
-  height: 1px;
-  background: var(--dark);
-  margin: 40px auto;
-  opacity: 0.3;
+.lang-btn{
+  border:none;
+  background:transparent;
+  padding:7px 14px;
+  border-radius:20px;
+  cursor:pointer;
+  font-size:11px;
+  letter-spacing:1px;
+  transition:.3s;
+  color:var(--dark);
 }
 
-/* CALENDAR */
-.calendar-section {
-  background: var(--warm-white);
-  padding: 80px 20px;
-}
-.calendar-wrapper {
-  background: white;
-  border-radius: 20px;
-  padding: 40px 30px;
-  max-width: 380px;
-  width: 100%;
-  box-shadow: 0 1px 30px rgba(0,0,0,0.04), 0 0 0 1px rgba(0,0,0,0.02);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-.calendar-wrapper:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 40px rgba(0,0,0,0.08);
-}
-.calendar-month {
-  font-family: 'Tenor Sans', 'Montserrat', sans-serif;
-  font-size: 22px;
-  font-weight: 400;
-  text-align: center;
-  letter-spacing: 3px;
-  margin-bottom: 30px;
-  color: var(--dark);
-}
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 4px;
-  text-align: center;
-}
-.calendar-day-header {
-  font-family: 'Tenor Sans', 'Montserrat', sans-serif;
-  font-size: 9px;
-  font-weight: 500;
-  letter-spacing: 1.5px;
-  color: var(--gray);
-  padding: 8px 0;
-  text-transform: uppercase;
-}
-.calendar-day {
-  font-family: 'Tenor Sans', 'Montserrat', sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  color: var(--dark);
-  padding: 10px 0;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  position: relative;
-  aspect-ratio: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.calendar-day:hover:not(.highlight) {
-  background: var(--soft-pink);
-  transform: scale(1.15);
-}
-.calendar-day.empty { visibility: hidden; }
-.calendar-day.highlight {
-  position: relative;
-  z-index: 1;
-}
-.calendar-day.highlight .heart-bg {
-  position: absolute;
-  width: 44px;
-  height: 44px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  opacity: 0.85;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-.calendar-day.highlight:hover .heart-bg {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1.1);
-}
-.calendar-day.highlight span {
-  position: relative;
-  z-index: 2;
-  font-weight: 500;
-  color: white;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+.lang-btn.active{
+  background:var(--dark);
+  color:#fff;
 }
 
-/* DIRECTIONS */
-.directions-section {
-  background: var(--cream);
-  padding: 80px 20px;
-}
-.direction-card {
-  max-width: 380px;
-  width: 100%;
-  margin-bottom: 60px;
-  text-align: center;
-  transition: transform 0.5s ease;
-}
-.direction-card:hover {
-  transform: translateY(-6px);
-}
-.direction-card:last-child { margin-bottom: 0; }
-.direction-icon {
-  margin-bottom: 20px;
-  transition: transform 0.4s ease;
-}
-.direction-card:hover .direction-icon {
-  transform: scale(1.05);
-}
-.direction-icon svg {
-  width: 100%;
-  max-width: 160px;
-  height: auto;
-}
-.direction-label {
-  font-family: 'Tenor Sans', 'Cormorant Garamond', serif;
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  margin-bottom: 8px;
-}
-.direction-time {
-  font-family: 'Tenor Sans', 'Montserrat', sans-serif;
-  font-size: 30px;
-  font-weight: 100;
-  letter-spacing: 6px;
-  margin-bottom: 25px;
-  color: var(--dark);
-}
-.direction-photo {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 20px;
-  border: 3px solid white;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-.direction-photo:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-}
-.direction-btn {
-  display: inline-block;
-  padding: 12px 36px;
-  border: 1px solid var(--dark);
-  border-radius: 30px;
-  text-decoration: none;
-  font-family: 'Tenor Sans', 'Montserrat', sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  color: var(--dark);
-  transition: all 0.4s ease;
-  background: transparent;
-}
-.direction-btn:hover {
-  background: var(--dark);
-  color: white;
-  transform: scale(1.05);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+/* ================= GENERAL ================= */
+
+.section{
+  padding:80px 20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
 }
 
-/* PHOTO COLLAGE - Same Style and Size */
-.collage-section {
-  background: var(--cream);
-  padding: 80px 20px;
-}
-.collage-container {
-  display: flex;
-  gap: 20px;
-  max-width: 500px;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.collage-frame {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 25px rgba(0,0,0,0.08);
-  transition: all 0.5s ease;
-  cursor: pointer;
-  width: 220px;
-  height: 300px;
-}
-.collage-frame:hover {
-  transform: translateY(-8px) rotate(0deg) !important;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-}
-.collage-frame:first-child {
-  transform: rotate(-2deg);
-}
-.collage-frame:last-child {
-  transform: rotate(1.5deg);
-}
-.collage-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.6s ease;
-}
-.collage-frame:hover img {
-  transform: scale(1.08);
-}
-.collage-frame::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.08));
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-.collage-frame:hover::after {
-  opacity: 1;
+/* ================= HEADER ================= */
+
+.header{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
 }
 
-/* COUNTDOWN */
-.countdown-section {
-  background: var(--warm-white);
-  padding: 80px 20px;
-}
-.countdown-title {
-  font-family: 'Great Vibes', cursive;
-  font-size: clamp(34px, 8vw, 56px);
-  color: var(--dark);
-  margin-bottom: 40px;
-}
-.countdown-grid {
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.countdown-item {
-  text-align: center;
-  min-width: 80px;
-  transition: transform 0.3s ease;
-}
-.countdown-item:hover {
-  transform: scale(1.1);
-}
-.countdown-number {
-  font-family: 'Tenor Sans', 'Cormorant Garamond', serif;
-  font-size: clamp(40px, 9vw, 60px);
-  font-weight: 300;
-  line-height: 1;
-  color: var(--dark);
-  margin-bottom: 8px;
-}
-.countdown-label {
-  font-family: 'Tenor Sans', 'Montserrat', sans-serif;
-  font-size: 10px;
-  font-weight: 400;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--gray);
-}
-.countdown-separator {
-  font-family: 'Tenor Sans', serif;
-  font-size: 40px;
-  font-weight: 300;
-  color: var(--light-gray);
-  align-self: flex-start;
-  margin-top: 4px;
+.header-bg{
+  position:absolute;
+  inset:0;
+  background:url('https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/7617bfbca30e62f74ca10db162ab343dae72e420/photo_5242604538437509150_y.jpg') center/cover no-repeat;
+  filter:brightness(.58);
+  transition:7s;
 }
 
-/* FINAL PHOTO */
-.final-section {
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-}
-.final-bg {
-  position: absolute;
-  inset: 0;
-  background: url('https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/8aa04e444f2d1b2ce0718516b0095e7c353f47d2/photo_5242604538437509147_y.jpg') center/cover no-repeat;
-  filter: brightness(0.55);
-  transition: transform 10s ease;
-}
-.final-section:hover .final-bg {
-  transform: scale(1.05);
-}
-.final-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.45) 100%);
-}
-.final-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: white;
-  padding: 40px 24px;
-}
-.final-text {
-  font-family: 'Tenor Sans', 'Cormorant Garamond', serif;
-  font-size: clamp(18px, 4vw, 28px);
-  font-weight: 300;
-  line-height: 2;
-  letter-spacing: 2px;
-}
-.final-text .intro-line {
-  display: block;
-  margin-bottom: 20px;
-  font-weight: 300;
-  letter-spacing: 3px;
-  opacity: 0.9;
-}
-.final-text .emphasis {
-  display: block;
-  font-family: 'Inter', 'Tenor Sans', sans-serif;
-  font-size: clamp(22px, 5.5vw, 38px);
-  font-weight: 200;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-  line-height: 1.6;
-  opacity: 1;
+.header:hover .header-bg{
+  transform:scale(1.04);
 }
 
-/* FOOTER */
-.footer {
-  padding: 30px;
-  text-align: center;
-  background: var(--cream);
-}
-.footer-text {
-  font-family: 'Great Vibes', cursive;
-  font-size: 24px;
-  color: var(--dark);
-  opacity: 0.6;
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.15);
 }
 
-/* ANIMATIONS */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.slide-in-left {
-  opacity: 0;
-  transform: translateX(-40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.slide-in-left.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-.slide-in-right {
-  opacity: 0;
-  transform: translateX(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.slide-in-right.visible {
-  opacity: 1;
-  transform: translateX(0);
+.header-content{
+  position:relative;
+  z-index:2;
+  color:#fff;
+  text-align:center;
+  padding:20px;
 }
 
-/* Floating particles */
-.particles-container {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
-.particle {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: var(--blush);
-  border-radius: 50%;
-  opacity: 0.3;
-  animation: particleFloat linear infinite;
-}
-@keyframes particleFloat {
-  0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-  10% { opacity: 0.3; }
-  90% { opacity: 0.3; }
-  100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+.subtitle{
+  font-size:11px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+  font-weight:300;
 }
 
-/* Responsive */
-@media (max-width: 480px) {
-  .calendar-wrapper { padding: 30px 20px; }
-  .calendar-day { font-size: 12px; padding: 8px 0; }
-  .countdown-grid { gap: 16px; }
-  .countdown-item { min-width: 65px; }
-  .collage-container { flex-direction: column; gap: 20px; }
-  .collage-frame, .collage-frame:first-child, .collage-frame:last-child {
-    width: 85%;
-    max-width: 300px;
-    transform: none !important;
-    margin: 0 auto;
+.names{
+  font-family:'Cormorant Garamond', serif;
+  font-size:clamp(52px,12vw,92px);
+  line-height:1.1;
+  letter-spacing:2px;
+  font-weight:400;
+}
+
+.date{
+  margin-top:20px;
+  font-size:20px;
+  letter-spacing:6px;
+  font-family:'Cormorant Garamond', serif;
+}
+
+/* ================= INVITATION ================= */
+
+.invitation-text{
+  max-width:620px;
+  font-size:22px;
+  line-height:1.9;
+  font-family:'Cormorant Garamond', serif;
+  font-weight:300;
+}
+
+/* ================= CALENDAR ================= */
+
+.calendar-box{
+  background:#fff;
+  width:100%;
+  max-width:420px;
+  border-radius:22px;
+  padding:32px 18px;
+  box-shadow:0 10px 40px rgba(0,0,0,.04);
+}
+
+.month{
+  font-size:22px;
+  margin-bottom:28px;
+  letter-spacing:2px;
+}
+
+.calendar-grid{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:8px;
+}
+
+.day-header{
+  font-size:10px;
+  color:var(--gray);
+}
+
+.day{
+  aspect-ratio:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  font-size:14px;
+}
+
+.day.empty{
+  visibility:hidden;
+}
+
+.day.highlight{
+  background:var(--pink);
+  color:#fff;
+  box-shadow:0 4px 18px rgba(231,194,203,.6);
+}
+
+/* ================= DIRECTIONS ================= */
+
+.direction-card{
+  width:100%;
+  max-width:420px;
+  margin-bottom:70px;
+}
+
+.direction-title{
+  font-size:20px;
+  letter-spacing:1px;
+  margin-bottom:12px;
+  font-weight:400;
+}
+
+.direction-time{
+  font-size:38px;
+  letter-spacing:3px;
+  margin-bottom:22px;
+  font-family:'Cormorant Garamond', serif;
+}
+
+.direction-photo{
+  width:100%;
+  max-width:320px;
+  height:220px;
+  object-fit:cover;
+  border-radius:18px;
+  margin-bottom:24px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  transition:.4s;
+}
+
+.direction-photo:hover{
+  transform:translateY(-5px);
+}
+
+.map-btn{
+  display:inline-block;
+  padding:13px 34px;
+  border-radius:14px;
+  text-decoration:none;
+  color:var(--dark);
+  border:1px solid rgba(0,0,0,.15);
+  transition:.35s;
+  letter-spacing:1px;
+  font-size:11px;
+  background:#fff;
+}
+
+.map-btn:hover{
+  background:var(--dark);
+  color:#fff;
+}
+
+/* ================= COLLAGE ================= */
+
+.collage-wrapper{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+}
+
+.collage-photo{
+  width:46%;
+  max-width:240px;
+  aspect-ratio:3/4;
+  overflow:hidden;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  transition:.4s;
+}
+
+.collage-photo:first-child{
+  transform:rotate(-3deg);
+}
+
+.collage-photo:last-child{
+  transform:rotate(3deg);
+}
+
+.collage-photo:hover{
+  transform:translateY(-6px) rotate(0deg);
+}
+
+.collage-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.4s;
+}
+
+.collage-photo:hover img{
+  transform:scale(1.05);
+}
+
+/* ================= COUNTDOWN ================= */
+
+.countdown{
+  background:#fff;
+}
+
+.count-title{
+  font-family:'Cormorant Garamond', serif;
+  font-size:54px;
+  margin-bottom:35px;
+  font-weight:400;
+}
+
+.count-grid{
+  width:100%;
+  max-width:800px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.count-item{
+  background:var(--cream);
+  border-radius:20px;
+  padding:22px 10px;
+  box-shadow:0 5px 20px rgba(0,0,0,.03);
+}
+
+.count-number{
+  font-size:clamp(32px,8vw,54px);
+  font-family:'Cormorant Garamond', serif;
+  margin-bottom:8px;
+}
+
+.count-label{
+  font-size:10px;
+  letter-spacing:1px;
+  color:var(--gray);
+}
+
+/* ================= FINAL ================= */
+
+.final{
+  position:relative;
+  min-height:100vh;
+  overflow:hidden;
+}
+
+.final-bg{
+  position:absolute;
+  inset:0;
+  background:url('https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/8aa04e444f2d1b2ce0718516b0095e7c353f47d2/photo_5242604538437509147_y.jpg') center/cover no-repeat;
+  filter:brightness(.55);
+}
+
+.final-content{
+  position:relative;
+  z-index:2;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+}
+
+.final-small{
+  font-size:18px;
+  letter-spacing:2px;
+  margin-bottom:18px;
+}
+
+.final-big{
+  font-size:clamp(24px,5vw,42px);
+  line-height:1.7;
+  letter-spacing:2px;
+  font-weight:300;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+  padding:28px;
+  text-align:center;
+}
+
+.footer-text{
+  font-family:'Cormorant Garamond', serif;
+  font-size:28px;
+  letter-spacing:2px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+  .section{
+    padding:65px 16px;
   }
-  .lang-switcher { top: 12px; right: 12px; }
-  .final-text .emphasis {
-    letter-spacing: 4px;
+
+  .names{
+    font-size:58px;
   }
+
+  .date{
+    font-size:17px;
+    letter-spacing:4px;
+  }
+
+  .invitation-text{
+    font-size:18px;
+    line-height:1.8;
+  }
+
+  .calendar-box{
+    padding:28px 16px;
+  }
+
+  .month{
+    font-size:20px;
+  }
+
+  .count-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+  }
+
+  .count-item{
+    padding:18px 8px;
+  }
+
+  .count-number{
+    font-size:36px;
+  }
+
+  .count-label{
+    font-size:9px;
+  }
+
+  .direction-photo{
+    max-width:100%;
+    height:200px;
+  }
+
+  .direction-title{
+    font-size:18px;
+  }
+
+  .direction-time{
+    font-size:30px;
+  }
+
+  .collage-wrapper{
+    gap:10px;
+  }
+
+  .collage-photo{
+    width:48%;
+  }
+
 }
 
-@media (min-width: 768px) {
-  .section { padding: 100px 40px; }
-  .invitation-text { max-width: 600px; }
+@media(max-width:480px){
+
+  .names{
+    font-size:46px;
+  }
+
+  .invitation-text{
+    font-size:17px;
+  }
+
+  .count-title{
+    font-size:40px;
+  }
+
+  .count-number{
+    font-size:30px;
+  }
+
+  .direction-photo{
+    height:180px;
+  }
+
+  .collage-photo:first-child{
+    transform:rotate(-2deg);
+  }
+
+  .collage-photo:last-child{
+    transform:rotate(2deg);
+  }
+
 }
 
-/* Ripple effect */
-.ripple {
-  position: relative;
-  overflow: hidden;
-}
-.ripple::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.2);
-  transform: translate(-50%, -50%);
-  transition: width 0.6s ease, height 0.6s ease;
-}
-.ripple:hover::before {
-  width: 300px;
-  height: 300px;
-}
 </style>
 </head>
+
 <body>
 
-<!-- SVG Filters -->
-<svg style="position:absolute;width:0;height:0;">
-  <defs>
-    <filter id="watercolor-texture">
-      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="4" result="noise"/>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G"/>
-    </filter>
-    <filter id="soft-shadow">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.08"/>
-    </filter>
-  </defs>
-</svg>
+<!-- LANGUAGE -->
 
-<!-- Floating Particles -->
-<div class="particles-container" id="particles"></div>
-
-<!-- Language Switcher -->
 <div class="lang-switcher">
   <button class="lang-btn active" onclick="switchLang('hy')">HY</button>
   <button class="lang-btn" onclick="switchLang('ru')">RU</button>
 </div>
 
 <!-- HEADER -->
-<section class="header-section">
-  <div class="header-bg"></div>
-  <div class="header-overlay"></div>
-  <div class="header-content">
-    <p class="header-subtitle" data-hy="Հարսանիքի Հրավեր" data-ru="Приглашение на свадьбу">Հարսանիքի Հրավեր</p>
-    <div class="header-names">
-      Հակոբ<span class="amp">&</span>Անյա
-    </div>
-    <div class="header-divider"></div>
-    <p class="header-date">17 . 07 . 2026</p>
-  </div>
-  <div class="scroll-hint">
-    <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-  </div>
+
+<section class="header">
+
+<div class="header-bg"></div>
+<div class="overlay"></div>
+
+<div class="header-content">
+
+<div class="subtitle"
+data-hy="Հարսանիքի Հրավեր"
+data-ru="Свадебное Приглашение">
+Հարսանիքի Հրավեր
+</div>
+
+<div class="names"
+data-hy="Հակոբ & Անյա"
+data-ru="Акоб & Аня">
+Հակոբ & Անյա
+</div>
+
+<div class="date">17 . 07 . 2026</div>
+
+</div>
 </section>
 
-<!-- INVITATION TEXT -->
-<section class="section invitation-section">
-  <div class="fade-in">
-    <svg class="section-ornament" width="60" height="60" viewBox="0 0 60 60">
-      <path d="M30 5 C30 5, 50 15, 50 30 C50 45, 30 55, 30 55 C30 55, 10 45, 10 30 C10 15, 30 5, 30 5Z" fill="none" stroke="#1A1A1A" stroke-width="0.5" opacity="0.2"/>
-      <path d="M30 12 C30 12, 44 20, 44 30 C44 40, 30 48, 30 48 C30 48, 16 40, 16 30 C16 20, 30 12, 30 12Z" fill="none" stroke="#1A1A1A" stroke-width="0.5" opacity="0.15"/>
-    </svg>
-  </div>
-  <div class="invitation-divider fade-in"></div>
-  <p class="invitation-text fade-in"
-     data-hy="Հարգելի հյուրեր։<br><br>Մոտենում է մեր կյանքի ամենագեղեցիկ և հիշարժան պահերից մեկը։ Մենք ընտանիք ենք կազմում և մեծ սիրով հրավիրում ենք Ձեզ կիսելու մեր երջանկությունը։"
-     data-ru="Уважаемые гости.<br><br>Приближается один из самых прекрасных и запоминающихся моментов нашей жизни. Мы создаём семью и с большой любовью приглашаем Вас разделить нашу радость и счастье.">
-    Հարգելի հյուրեր։<br><br>Մոտենում է մեր կյանքի ամենագեղեցիկ և հիշարժան պահերից մեկը։ Մենք ընտանիք ենք կազմում և մեծ սիրով հրավիրում ենք Ձեզ կիսելու մեր երջանկությունը։
-  </p>
-  <div class="invitation-divider fade-in"></div>
+<!-- INVITATION -->
+
+<section class="section">
+
+<div class="invitation-text"
+
+data-hy="Հարգելի հյուրեր։<br><br>Մոտենում է մեր կյանքի ամենագեղեցիկ և հիշարժան պահերից մեկը։ Մենք ընտանիք ենք կազմում և մեծ սիրով հրավիրում ենք Ձեզ կիսելու մեր երջանկությունը։"
+
+data-ru="Дорогие гости.<br><br>Приближается один из самых прекрасных и запоминающихся моментов нашей жизни. Мы создаём семью и с большой любовью приглашаем Вас разделить наше счастье и радость.">
+
+Հարգելի հյուրեր։<br><br>
+Մոտենում է մեր կյանքի ամենագեղեցիկ և հիշարժան պահերից մեկը։
+Մենք ընտանիք ենք կազմում և մեծ սիրով հրավիրում ենք Ձեզ
+կիսելու մեր երջանկությունը։
+
+</div>
+
 </section>
 
 <!-- CALENDAR -->
-<section class="section calendar-section">
-  <div class="calendar-wrapper fade-in">
-    <div class="calendar-month" data-hy="Հուլիս 2026" data-ru="Июль 2026">Հուլիս 2026</div>
-    <div class="calendar-grid">
-      <div class="calendar-day-header" data-hy="ԵՐԿ" data-ru="ПН">ԵՐԿ</div>
-      <div class="calendar-day-header" data-hy="ԵՐՔ" data-ru="ВТ">ԵՐՔ</div>
-      <div class="calendar-day-header" data-hy="ՉՈՐ" data-ru="СР">ՉՈՐ</div>
-      <div class="calendar-day-header" data-hy="ՀՆԳ" data-ru="ЧТ">ՀՆԳ</div>
-      <div class="calendar-day-header" data-hy="ՈՒՐԲ" data-ru="ПТ">ՈՒՐԲ</div>
-      <div class="calendar-day-header" data-hy="ՇԲԹ" data-ru="СБ">ՇԲԹ</div>
-      <div class="calendar-day-header" data-hy="ԿԻՐ" data-ru="ВС">ԿԻՐ</div>
 
-      <div class="calendar-day empty"></div>
-      <div class="calendar-day empty"></div>
-      <div class="calendar-day"><span>1</span></div>
-      <div class="calendar-day"><span>2</span></div>
-      <div class="calendar-day"><span>3</span></div>
-      <div class="calendar-day"><span>4</span></div>
-      <div class="calendar-day"><span>5</span></div>
+<section class="section">
 
-      <div class="calendar-day"><span>6</span></div>
-      <div class="calendar-day"><span>7</span></div>
-      <div class="calendar-day"><span>8</span></div>
-      <div class="calendar-day"><span>9</span></div>
-      <div class="calendar-day"><span>10</span></div>
-      <div class="calendar-day"><span>11</span></div>
-      <div class="calendar-day"><span>12</span></div>
+<div class="calendar-box">
 
-      <div class="calendar-day"><span>13</span></div>
-      <div class="calendar-day"><span>14</span></div>
-      <div class="calendar-day"><span>15</span></div>
-      <div class="calendar-day"><span>16</span></div>
-      <div class="calendar-day highlight">
-        <svg class="heart-bg" viewBox="0 0 100 100">
-          <defs>
-            <radialGradient id="heartGrad" cx="50%" cy="40%" r="50%">
-              <stop offset="0%" stop-color="#F8DDE3"/>
-              <stop offset="40%" stop-color="#F2B5C4"/>
-              <stop offset="80%" stop-color="#E8A0B5"/>
-              <stop offset="100%" stop-color="#E090A8" stop-opacity="0.6"/>
-            </radialGradient>
-          </defs>
-          <path d="M50 88 C50 88, 8 62, 8 36 C8 18, 22 8, 36 8 C44 8, 48 13, 50 17 C52 13, 56 8, 64 8 C78 8, 92 18, 92 36 C92 62, 50 88, 50 88Z"
-                fill="url(#heartGrad)" opacity="0.75" filter="url(#watercolor-texture)"/>
-        </svg>
-        <span>17</span>
-      </div>
-      <div class="calendar-day"><span>18</span></div>
-      <div class="calendar-day"><span>19</span></div>
+<div class="month"
+data-hy="Հուլիս 2026"
+data-ru="Июль 2026">
+Հուլիս 2026
+</div>
 
-      <div class="calendar-day"><span>20</span></div>
-      <div class="calendar-day"><span>21</span></div>
-      <div class="calendar-day"><span>22</span></div>
-      <div class="calendar-day"><span>23</span></div>
-      <div class="calendar-day"><span>24</span></div>
-      <div class="calendar-day"><span>25</span></div>
-      <div class="calendar-day"><span>26</span></div>
+<div class="calendar-grid">
 
-      <div class="calendar-day"><span>27</span></div>
-      <div class="calendar-day"><span>28</span></div>
-      <div class="calendar-day"><span>29</span></div>
-      <div class="calendar-day"><span>30</span></div>
-      <div class="calendar-day"><span>31</span></div>
-      <div class="calendar-day empty"></div>
-      <div class="calendar-day empty"></div>
-    </div>
-  </div>
+<div class="day-header">ПН</div>
+<div class="day-header">ВТ</div>
+<div class="day-header">СР</div>
+<div class="day-header">ЧТ</div>
+<div class="day-header">ПТ</div>
+<div class="day-header">СБ</div>
+<div class="day-header">ВС</div>
+
+<div class="day empty"></div>
+<div class="day empty"></div>
+
+<div class="day">1</div>
+<div class="day">2</div>
+<div class="day">3</div>
+<div class="day">4</div>
+<div class="day">5</div>
+
+<div class="day">6</div>
+<div class="day">7</div>
+<div class="day">8</div>
+<div class="day">9</div>
+<div class="day">10</div>
+<div class="day">11</div>
+<div class="day">12</div>
+
+<div class="day">13</div>
+<div class="day">14</div>
+<div class="day">15</div>
+<div class="day">16</div>
+<div class="day highlight">17</div>
+<div class="day">18</div>
+<div class="day">19</div>
+
+<div class="day">20</div>
+<div class="day">21</div>
+<div class="day">22</div>
+<div class="day">23</div>
+<div class="day">24</div>
+<div class="day">25</div>
+<div class="day">26</div>
+
+<div class="day">27</div>
+<div class="day">28</div>
+<div class="day">29</div>
+<div class="day">30</div>
+<div class="day">31</div>
+
+</div>
+</div>
+
 </section>
 
-<!-- DIRECTIONS -->
-<section class="section directions-section">
-  <!-- Church -->
-  <div class="direction-card fade-in">
-    <div class="direction-icon">
-      <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <line x1="100" y1="10" x2="100" y2="35" stroke="#1A1A1A" stroke-width="0.8"/>
-        <line x1="90" y1="20" x2="110" y2="20" stroke="#1A1A1A" stroke-width="0.8"/>
-        <path d="M85 60 L100 35 L115 60" stroke="#1A1A1A" stroke-width="1" fill="none"/>
-        <path d="M80 60 L100 40 L120 60" stroke="#1A1A1A" stroke-width="0.5" fill="none" opacity="0.4"/>
-        <rect x="55" y="60" width="90" height="120" stroke="#1A1A1A" stroke-width="1" fill="none"/>
-        <rect x="35" y="80" width="25" height="100" stroke="#1A1A1A" stroke-width="0.8" fill="none"/>
-        <rect x="140" y="80" width="25" height="100" stroke="#1A1A1A" stroke-width="0.8" fill="none"/>
-        <path d="M35 80 L47.5 55 L60 80" stroke="#1A1A1A" stroke-width="0.8" fill="none"/>
-        <path d="M140 80 L152.5 55 L165 80" stroke="#1A1A1A" stroke-width="0.8" fill="none"/>
-        <line x1="47.5" y1="45" x2="47.5" y2="55" stroke="#1A1A1A" stroke-width="0.6"/>
-        <line x1="43" y1="50" x2="52" y2="50" stroke="#1A1A1A" stroke-width="0.6"/>
-        <line x1="152.5" y1="45" x2="152.5" y2="55" stroke="#1A1A1A" stroke-width="0.6"/>
-        <line x1="148" y1="50" x2="157" y2="50" stroke="#1A1A1A" stroke-width="0.6"/>
-        <path d="M85 180 L85 130 Q100 115 115 130 L115 180" stroke="#1A1A1A" stroke-width="1" fill="none"/>
-        <line x1="100" y1="120" x2="100" y2="180" stroke="#1A1A1A" stroke-width="0.5" opacity="0.5"/>
-        <line x1="85" y1="155" x2="115" y2="155" stroke="#1A1A1A" stroke-width="0.5" opacity="0.5"/>
-        <path d="M90 180 L90 160 Q100 150 110 160 L110 180" stroke="#1A1A1A" stroke-width="0.8" fill="none"/>
-        <circle cx="72" cy="130" r="8" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
-        <circle cx="128" cy="130" r="8" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
-        <line x1="72" y1="122" x2="72" y2="138" stroke="#1A1A1A" stroke-width="0.4"/>
-        <line x1="64" y1="130" x2="80" y2="130" stroke="#1A1A1A" stroke-width="0.4"/>
-        <line x1="128" y1="122" x2="128" y2="138" stroke="#1A1A1A" stroke-width="0.4"/>
-        <line x1="120" y1="130" x2="136" y2="130" stroke="#1A1A1A" stroke-width="0.4"/>
-        <line x1="30" y1="180" x2="170" y2="180" stroke="#1A1A1A" stroke-width="1.2"/>
-        <line x1="75" y1="188" x2="125" y2="188" stroke="#1A1A1A" stroke-width="0.6"/>
-        <line x1="70" y1="196" x2="130" y2="196" stroke="#1A1A1A" stroke-width="0.5"/>
-      </svg>
-    </div>
-    <div class="direction-label" data-hy="Եկեղեցի՝ Սուրբ Երրորդություն" data-ru="Церковь: Святая Троица">Եկեղեցի՝ Սուրբ Երրորդություն</div>
-    <div class="direction-time">15:00</div>
-    <img class="direction-photo" src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/ab191a26dc1114a03167e42252ef7f8677aa55c8/1700209165720mainImg.jpg" alt="Եկեղեցի" loading="lazy"/>
-    <br><br>
-    <a href="https://yandex.com/maps/-/CPwo76JC" target="_blank" rel="noopener" class="direction-btn ripple" data-hy="Քարտեզ" data-ru="Карта">Քարտեզ</a>
-  </div>
+<!-- CHURCH -->
 
-  <!-- Restaurant -->
-  <div class="direction-card fade-in">
-    <div class="direction-icon">
-      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M30 100 L100 40 L170 100" stroke="#1A1A1A" stroke-width="1" fill="none"/>
-        <path d="M25 100 L100 35 L175 100" stroke="#1A1A1A" stroke-width="0.5" fill="none" opacity="0.3"/>
-        <rect x="40" y="100" width="120" height="70" stroke="#1A1A1A" stroke-width="1" fill="none"/>
-        <line x1="55" y1="100" x2="55" y2="170" stroke="#1A1A1A" stroke-width="0.8"/>
-        <line x1="75" y1="100" x2="75" y2="170" stroke="#1A1A1A" stroke-width="0.8"/>
-        <line x1="125" y1="100" x2="125" y2="170" stroke="#1A1A1A" stroke-width="0.8"/>
-        <line x1="145" y1="100" x2="145" y2="170" stroke="#1A1A1A" stroke-width="0.8"/>
-        <rect x="51" y="165" width="8" height="5" stroke="#1A1A1A" stroke-width="0.6" fill="none"/>
-        <rect x="71" y="165" width="8" height="5" stroke="#1A1A1A" stroke-width="0.6" fill="none"/>
-        <rect x="121" y="165" width="8" height="5" stroke="#1A1A1A" stroke-width="0.6" fill="none"/>
-        <rect x="141" y="165" width="8" height="5" stroke="#1A1A1A" stroke-width="0.6" fill="none"/>
-        <path d="M60 130 L60 115 Q65 110 70 115 L70 130" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
-        <path d="M130 130 L130 115 Q135 110 140 115 L140 130" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
-        <path d="M90 170 L90 140 Q100 128 110 140 L110 170" stroke="#1A1A1A" stroke-width="0.8" fill="none"/>
-        <circle cx="100" cy="155" r="2" stroke="#1A1A1A" stroke-width="0.6" fill="none"/>
-        <path d="M80 105 L120 105" stroke="#1A1A1A" stroke-width="0.4" opacity="0.5"/>
-        <circle cx="100" cy="70" r="12" stroke="#1A1A1A" stroke-width="0.6" fill="none"/>
-        <circle cx="100" cy="70" r="8" stroke="#1A1A1A" stroke-width="0.4" fill="none" opacity="0.4"/>
-        <line x1="85" y1="170" x2="115" y2="170" stroke="#1A1A1A" stroke-width="0.8"/>
-        <line x1="80" y1="178" x2="120" y2="178" stroke="#1A1A1A" stroke-width="0.6"/>
-        <line x1="75" y1="186" x2="125" y2="186" stroke="#1A1A1A" stroke-width="0.5"/>
-        <path d="M95 58 L100 50 L105 58" stroke="#1A1A1A" stroke-width="0.6" fill="none"/>
-      </svg>
-    </div>
-    <div class="direction-label" data-hy="Սրահ՝ Հրաշք Այգի" data-ru="Банкетный зал: Чудесный Сад">Սրահ՝ Հրաշք Այգի</div>
-    <div class="direction-time">17:30</div>
-    <img class="direction-photo" src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/ab191a26dc1114a03167e42252ef7f8677aa55c8/182765173_2740209479529041_8741023888127056283_n.jpg" alt="Սրահ" loading="lazy"/>
-    <br><br>
-    <a href="https://yandex.com/maps/-/CPHaQKNa" target="_blank" rel="noopener" class="direction-btn ripple" data-hy="Քարտեզ" data-ru="Карта">Քարտեզ</a>
-  </div>
+<section class="section">
+
+<div class="direction-card">
+
+<div class="direction-title"
+data-hy="Եկեղեցի՝ Սուրբ Երրորդություն"
+data-ru="Церковь — Святая Троица">
+Եկեղեցի՝ Սուրբ Երրորդություն
+</div>
+
+<div class="direction-time">15:00</div>
+
+<img class="direction-photo"
+src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/ab191a26dc1114a03167e42252ef7f8677aa55c8/1700209165720mainImg.jpg">
+
+<br>
+
+<a class="map-btn"
+href="https://yandex.com/maps/-/CPwo76JC"
+target="_blank"
+
+data-hy="Քարտեզ"
+data-ru="Карта">
+Քարտեզ
+</a>
+
+</div>
+
+<!-- RESTAURANT -->
+
+<div class="direction-card">
+
+<div class="direction-title"
+data-hy="Սրահ՝ Հրաշք Այգի"
+data-ru="Ресторан — Чудесный Сад">
+Սրահ՝ Հրաշք Այգի
+</div>
+
+<div class="direction-time">17:30</div>
+
+<img class="direction-photo"
+src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/ab191a26dc1114a03167e42252ef7f8677aa55c8/182765173_2740209479529041_8741023888127056283_n.jpg">
+
+<br>
+
+<a class="map-btn"
+href="https://yandex.com/maps/-/CPHaQKNa"
+target="_blank"
+
+data-hy="Քարտեզ"
+data-ru="Карта">
+Քարտեզ
+</a>
+
+</div>
+
 </section>
 
-<!-- PHOTO COLLAGE -->
-<section class="section collage-section">
-  <div class="collage-container">
-    <div class="collage-frame slide-in-left">
-      <img src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/7617bfbca30e62f74ca10db162ab343dae72e420/photo_5242604538437509149_y.jpg" alt="Մեր պահերից" loading="lazy"/>
-    </div>
-    <div class="collage-frame slide-in-right">
-      <img src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/7617bfbca30e62f74ca10db162ab343dae72e420/photo_5242604538437509148_y.jpg" alt="Մեր պահերից" loading="lazy"/>
-    </div>
-  </div>
+<!-- COLLAGE -->
+
+<section class="section">
+
+<div class="collage-wrapper">
+
+<div class="collage-photo">
+<img src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/7617bfbca30e62f74ca10db162ab343dae72e420/photo_5242604538437509149_y.jpg">
+</div>
+
+<div class="collage-photo">
+<img src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/7617bfbca30e62f74ca10db162ab343dae72e420/photo_5242604538437509148_y.jpg">
+</div>
+
+</div>
+
 </section>
 
 <!-- COUNTDOWN -->
-<section class="section countdown-section">
-  <div class="countdown-title fade-in" data-hy="Մինչև մեր օրը" data-ru="До нашего дня">Մինչև մեր օրը</div>
-  <div class="countdown-grid fade-in">
-    <div class="countdown-item">
-      <div class="countdown-number" id="days">---</div>
-      <div class="countdown-label" data-hy="Օր" data-ru="Дней">Օր</div>
-    </div>
-    <div class="countdown-separator">:</div>
-    <div class="countdown-item">
-      <div class="countdown-number" id="hours">--</div>
-      <div class="countdown-label" data-hy="Ժամ" data-ru="Часов">Ժամ</div>
-    </div>
-    <div class="countdown-separator">:</div>
-    <div class="countdown-item">
-      <div class="countdown-number" id="minutes">--</div>
-      <div class="countdown-label" data-hy="Րոպե" data-ru="Минут">Րոպե</div>
-    </div>
-    <div class="countdown-separator">:</div>
-    <div class="countdown-item">
-      <div class="countdown-number" id="seconds">--</div>
-      <div class="countdown-label" data-hy="Վայրկյան" data-ru="Секунд">Վայրկյան</div>
-    </div>
-  </div>
+
+<section class="section countdown">
+
+<div class="count-title"
+data-hy="Մինչև մեր օրը"
+data-ru="До нашего дня">
+Մինչև մեր օրը
+</div>
+
+<div class="count-grid">
+
+<div class="count-item">
+<div class="count-number" id="days">00</div>
+<div class="count-label"
+data-hy="ՕՐ"
+data-ru="ДНЕЙ">
+ՕՐ
+</div>
+</div>
+
+<div class="count-item">
+<div class="count-number" id="hours">00</div>
+<div class="count-label"
+data-hy="ԺԱՄ"
+data-ru="ЧАСОВ">
+ԺԱՄ
+</div>
+</div>
+
+<div class="count-item">
+<div class="count-number" id="minutes">00</div>
+<div class="count-label"
+data-hy="ՐՈՊԵ"
+data-ru="МИНУТ">
+ՐՈՊԵ
+</div>
+</div>
+
+<div class="count-item">
+<div class="count-number" id="seconds">00</div>
+<div class="count-label"
+data-hy="ՎԱՅՐԿՅԱՆ"
+data-ru="СЕКУНД">
+ՎԱՅՐԿՅԱՆ
+</div>
+</div>
+
+</div>
+
 </section>
 
-<!-- FINAL SECTION -->
-<section class="section final-section">
-  <div class="final-bg"></div>
-  <div class="final-overlay"></div>
-  <div class="final-content fade-in">
-    <p class="final-text">
-      <span class="intro-line" data-hy="Ձեզ հետ բերեք" data-ru="Возьмите с собой">Ձեզ հետ բերեք</span>
-      <span class="emphasis" data-hy="ՍԵՐ, ԺՊԻՏՆԵՐ և ԴՐԱԿԱՆ ԷՄՈՑԻԱՆԵՐ" data-ru="ЛЮБОВЬ, УЛЫБКИ и ПОЗИТИВНЫЕ ЭМОЦИИ">ՍԵՐ, ԺՊԻՏՆԵՐ և ԴՐԱԿԱՆ ԷՄՈՑԻԱՆԵՐ</span>
-    </p>
-  </div>
+<!-- FINAL -->
+
+<section class="final">
+
+<div class="final-bg"></div>
+<div class="overlay"></div>
+
+<div class="final-content">
+
+<div class="final-small"
+data-hy="Ձեզ հետ բերեք"
+data-ru="Возьмите с собой">
+Ձեզ հետ բերեք
+</div>
+
+<div class="final-big"
+data-hy="ՍԵՐ, ԺՊԻՏՆԵՐ և ԴՐԱԿԱՆ ԷՄՈՑԻԱՆԵՐ"
+data-ru="ЛЮБОВЬ, УЛЫБКИ И ПОЛОЖИТЕЛЬНЫЕ ЭМОЦИИ">
+ՍԵՐ, ԺՊԻՏՆԵՐ և ԴՐԱԿԱՆ ԷՄՈՑԻԱՆԵՐ
+</div>
+
+</div>
+
 </section>
 
 <!-- FOOTER -->
+
 <div class="footer">
-  <div class="footer-text">Հակոբ & Անյա</div>
+
+<div class="footer-text"
+data-hy="Հակոբ & Անյա"
+data-ru="Акоб & Аня">
+Հակոբ & Անյա
+</div>
+
 </div>
 
 <script>
-// Language Switcher
-let currentLang = 'hy';
 
-function switchLang(lang) {
-  currentLang = lang;
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.textContent.trim() === lang.toUpperCase());
-  });
+/* LANGUAGE */
 
-  document.querySelectorAll('[data-hy]').forEach(el => {
-    const text = el.getAttribute(`data-${lang}`);
-    if (text) {
-      el.innerHTML = text;
-    }
-  });
+function switchLang(lang){
+
+document.querySelectorAll('.lang-btn').forEach(btn=>{
+btn.classList.remove('active');
+});
+
+event.target.classList.add('active');
+
+document.querySelectorAll('[data-hy]').forEach(el=>{
+
+if(lang === 'hy'){
+el.innerHTML = el.dataset.hy;
+}else{
+el.innerHTML = el.dataset.ru;
 }
 
-// Countdown Timer
-const weddingDate = new Date('2026-07-17T15:00:00');
+});
 
-function updateCountdown() {
-  const now = new Date();
-  const diff = weddingDate - now;
+}
 
-  if (diff <= 0) {
-    document.getElementById('days').textContent = '0';
-    document.getElementById('hours').textContent = '0';
-    document.getElementById('minutes').textContent = '0';
-    document.getElementById('seconds').textContent = '0';
-    return;
-  }
+/* COUNTDOWN */
 
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+const weddingDate = new Date("2026-07-17T15:00:00").getTime();
 
-  document.getElementById('days').textContent = days;
-  document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-  document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-  document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+function updateCountdown(){
+
+const now = new Date().getTime();
+const distance = weddingDate - now;
+
+const days = Math.floor(distance / (1000*60*60*24));
+const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+const seconds = Math.floor((distance % (1000*60)) / 1000);
+
+document.getElementById("days").innerHTML = days;
+document.getElementById("hours").innerHTML = hours;
+document.getElementById("minutes").innerHTML = minutes;
+document.getElementById("seconds").innerHTML = seconds;
+
 }
 
 updateCountdown();
-setInterval(updateCountdown, 1000);
+setInterval(updateCountdown,1000);
 
-// Scroll Animations (Intersection Observer)
-const observerOptions = {
-  threshold: 0.15,
-  rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, observerOptions);
-
-document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
-  observer.observe(el);
-});
-
-// Floating Particles
-function createParticles() {
-  const container = document.getElementById('particles');
-  const particleCount = window.innerWidth < 600 ? 12 : 20;
-
-  for (let i = 0; i < particleCount; i++) {
-    const particle = document.createElement('div');
-    particle.className = 'particle';
-    const size = Math.random() * 6 + 3;
-    particle.style.width = size + 'px';
-    particle.style.height = size + 'px';
-    particle.style.left = Math.random() * 100 + '%';
-    particle.style.animationDuration = (Math.random() * 15 + 15) + 's';
-    particle.style.animationDelay = (Math.random() * 10) + 's';
-    particle.style.opacity = Math.random() * 0.3 + 0.1;
-    container.appendChild(particle);
-  }
-}
-createParticles();
-
-// Parallax effect for header
-window.addEventListener('scroll', () => {
-  const scrolled = window.pageYOffset;
-  const headerBg = document.querySelector('.header-bg');
-  if (headerBg) {
-    headerBg.style.transform = `scale(${1 + scrolled * 0.0003}) translateY(${scrolled * 0.3}px)`;
-  }
-});
 </script>
 
 </body>
