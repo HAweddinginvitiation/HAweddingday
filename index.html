@@ -1,332 +1,74 @@
-
-
-Вставленный текст.txt
-Документ
-chat plase give the same code but do some corrections
-in translation to russian translate everything for example Հակոբ և Անյա 
-The two photos make in collage style next to each other 
-
-countdown timer make in the way that can be fullly visible on phone 
-
-Make everything by phone style acceptable and visible
-Give correctet whole html code
-
-
-
-
-
-Вставленный текст(1).txt
-Документ
-keep this code only chnage russian and armenian font style make it more minimalist 
-And the phtos of church and restaurand do in medium size on rectangular buttons
-Make everythinc acceptable for phone
-
-/* REPLACE ONLY THESE PARTS IN YOUR CODE */
-
-/* ================= FONTS ================= */
-
-body{
-  font-family:'Tenor Sans', 'Montserrat', sans-serif;
-  background:var(--cream);
-  color:var(--dark);
-  overflow-x:hidden;
-  font-weight:300;
-}
-
-.names{
-  font-family:'Cormorant Garamond', serif;
-  font-size:clamp(52px,12vw,92px);
-  line-height:1.1;
-  letter-spacing:2px;
-  font-weight:400;
-}
-
-.subtitle{
-  font-size:11px;
-  letter-spacing:4px;
-  text-transform:uppercase;
-  margin-bottom:18px;
-  font-weight:300;
-}
-
-.invitation-text{
-  max-width:620px;
-  font-size:22px;
-  line-height:1.9;
-  font-family:'Cormorant Garamond', serif;
-  font-weight:300;
-}
-
-.direction-title{
-  font-size:20px;
-  letter-spacing:1px;
-  margin-bottom:12px;
-  font-family:'Tenor Sans', sans-serif;
-  font-weight:400;
-}
-
-.direction-time{
-  font-size:38px;
-  letter-spacing:3px;
-  margin-bottom:22px;
-  font-family:'Cormorant Garamond', serif;
-  font-weight:300;
-}
-
-.count-title{
-  font-family:'Cormorant Garamond', serif;
-  font-size:54px;
-  margin-bottom:35px;
-  font-weight:400;
-}
-
-.footer-text{
-  font-family:'Cormorant Garamond', serif;
-  font-size:28px;
-  letter-spacing:2px;
-}
-
-/* ================= CHURCH & RESTAURANT PHOTOS ================= */
-
-.direction-photo{
-  width:100%;
-  max-width:320px;
-  height:220px;
-  object-fit:cover;
-  border-radius:18px;
-  margin-bottom:24px;
-  border:none;
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
-  transition:.4s;
-}
-
-.direction-photo:hover{
-  transform:translateY(-5px);
-}
-
-/* ================= BUTTONS ================= */
-
-.map-btn{
-  display:inline-block;
-  padding:13px 34px;
-  border-radius:14px;
-  text-decoration:none;
-  color:var(--dark);
-  border:1px solid rgba(0,0,0,.15);
-  transition:.35s;
-  letter-spacing:1px;
-  font-size:11px;
-  background:#fff;
-}
-
-.map-btn:hover{
-  background:var(--dark);
-  color:#fff;
-}
-
-/* ================= PHONE RESPONSIVE ================= */
-
-@media(max-width:768px){
-
-  .section{
-    padding:65px 16px;
-  }
-
-  .names{
-    font-size:58px;
-  }
-
-  .subtitle{
-    font-size:10px;
-    letter-spacing:3px;
-  }
-
-  .date{
-    font-size:17px;
-    letter-spacing:4px;
-  }
-
-  .invitation-text{
-    font-size:18px;
-    line-height:1.8;
-  }
-
-  .calendar-box{
-    padding:28px 16px;
-    border-radius:18px;
-  }
-
-  .month{
-    font-size:20px;
-  }
-
-  .day{
-    font-size:13px;
-  }
-
-  .count-grid{
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-  }
-
-  .count-item{
-    padding:18px 6px;
-    border-radius:18px;
-  }
-
-  .count-number{
-    font-size:36px;
-  }
-
-  .count-label{
-    font-size:9px;
-    letter-spacing:1px;
-  }
-
-  .direction-photo{
-    max-width:100%;
-    height:200px;
-    border-radius:16px;
-  }
-
-  .direction-title{
-    font-size:18px;
-  }
-
-  .direction-time{
-    font-size:30px;
-  }
-
-  .collage-wrapper{
-    gap:10px;
-  }
-
-  .collage-photo{
-    width:48%;
-    border-radius:14px;
-  }
-
-  .final-small{
-    font-size:18px;
-    letter-spacing:2px;
-  }
-
-  .final-big{
-    font-size:24px;
-    line-height:1.6;
-    letter-spacing:2px;
-  }
-
-}
-
-@media(max-width:480px){
-
-  .names{
-    font-size:48px;
-  }
-
-  .invitation-text{
-    font-size:17px;
-  }
-
-  .count-title{
-    font-size:40px;
-  }
-
-  .count-number{
-    font-size:32px;
-  }
-
-  .direction-photo{
-    height:180px;
-  }
-
-  .collage-photo:first-child{
-    transform:rotate(-2deg);
-  }
-
-  .collage-photo:last-child{
-    transform:rotate(2deg);
-  }
-
-}
-
-so give the whole code
-
 <!DOCTYPE html>
 <html lang="hy">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Հակոբ & Անյա | 17.07.2026</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&family=Tenor+Sans&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@200;300;400&family=Tenor+Sans&display=swap" rel="stylesheet">
 <style>
-
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
 }
-
 :root{
   --cream:#faf8f5;
   --white:#ffffff;
   --soft:#f2e6df;
   --dark:#171717;
-  --gray:#777;
+  --gray:#888;
   --pink:#e7c2cb;
 }
-
 html{
   scroll-behavior:smooth;
 }
-
 body{
   font-family:'Tenor Sans','Montserrat',sans-serif;
   background:var(--cream);
   color:var(--dark);
   overflow-x:hidden;
   font-weight:300;
+  -webkit-font-smoothing:antialiased;
 }
 
 /* ================= LANGUAGE ================= */
-
 .lang-switcher{
   position:fixed;
   top:15px;
   right:15px;
   z-index:999;
-  background:rgba(255,255,255,.9);
-  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
   border-radius:30px;
-  padding:4px;
+  padding:5px;
   display:flex;
-  gap:5px;
-  box-shadow:0 4px 20px rgba(0,0,0,.05);
+  gap:4px;
+  box-shadow:0 4px 24px rgba(0,0,0,.06);
 }
-
 .lang-btn{
   border:none;
   background:transparent;
-  padding:7px 14px;
+  padding:8px 16px;
   border-radius:20px;
   cursor:pointer;
   font-size:11px;
-  letter-spacing:1px;
-  transition:.3s;
+  letter-spacing:1.5px;
+  transition:all .3s ease;
   color:var(--dark);
+  font-family:'Tenor Sans',sans-serif;
+  font-weight:400;
 }
-
+.lang-btn:hover{
+  background:rgba(23,23,23,.08);
+}
 .lang-btn.active{
   background:var(--dark);
   color:#fff;
+  box-shadow:0 2px 10px rgba(0,0,0,.15);
 }
 
 /* ================= GENERAL ================= */
-
 .section{
   padding:80px 20px;
   display:flex;
@@ -337,7 +79,6 @@ body{
 }
 
 /* ================= HEADER ================= */
-
 .header{
   position:relative;
   min-height:100vh;
@@ -346,25 +87,21 @@ body{
   justify-content:center;
   overflow:hidden;
 }
-
 .header-bg{
   position:absolute;
   inset:0;
   background:url('https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/7617bfbca30e62f74ca10db162ab343dae72e420/photo_5242604538437509150_y.jpg') center/cover no-repeat;
   filter:brightness(.58);
-  transition:7s;
+  transition:transform 8s ease;
 }
-
 .header:hover .header-bg{
   transform:scale(1.04);
 }
-
 .overlay{
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,.15);
+  background:rgba(0,0,0,.18);
 }
-
 .header-content{
   position:relative;
   z-index:2;
@@ -372,42 +109,57 @@ body{
   text-align:center;
   padding:20px;
 }
-
 .subtitle{
   font-size:11px;
   letter-spacing:4px;
   text-transform:uppercase;
   margin-bottom:18px;
   font-weight:300;
+  opacity:0;
+  animation:fadeUp .8s ease forwards .3s;
 }
-
 .names{
   font-family:'Cormorant Garamond', serif;
-  font-size:clamp(52px,12vw,92px);
+  font-size:clamp(48px,12vw,92px);
   line-height:1.1;
   letter-spacing:2px;
   font-weight:400;
+  opacity:0;
+  animation:fadeUp .8s ease forwards .5s;
 }
-
 .date{
-  margin-top:20px;
+  margin-top:24px;
   font-size:20px;
   letter-spacing:6px;
   font-family:'Cormorant Garamond', serif;
+  font-weight:300;
+  opacity:0;
+  animation:fadeUp .8s ease forwards .7s;
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(25px);}
+  to{opacity:1;transform:translateY(0);}
 }
 
 /* ================= INVITATION ================= */
-
 .invitation-text{
   max-width:620px;
   font-size:22px;
   line-height:1.9;
   font-family:'Cormorant Garamond', serif;
   font-weight:300;
+  opacity:0;
+  transition:opacity .8s ease, transform .8s ease;
+}
+.invitation-text.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+.invitation-text{
+  transform:translateY(30px);
 }
 
 /* ================= CALENDAR ================= */
-
 .calendar-box{
   background:#fff;
   width:100%;
@@ -415,25 +167,28 @@ body{
   border-radius:22px;
   padding:32px 18px;
   box-shadow:0 10px 40px rgba(0,0,0,.04);
+  transition:transform .3s ease, box-shadow .3s ease;
 }
-
+.calendar-box:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 48px rgba(0,0,0,.07);
+}
 .month{
   font-size:22px;
   margin-bottom:28px;
   letter-spacing:2px;
+  font-weight:400;
 }
-
 .calendar-grid{
   display:grid;
   grid-template-columns:repeat(7,1fr);
   gap:8px;
 }
-
 .day-header{
   font-size:10px;
   color:var(--gray);
+  letter-spacing:1px;
 }
-
 .day{
   aspect-ratio:1;
   display:flex;
@@ -441,12 +196,15 @@ body{
   justify-content:center;
   border-radius:50%;
   font-size:14px;
+  transition:transform .25s ease;
 }
-
+.day:not(.empty):not(.highlight):hover{
+  transform:scale(1.15);
+  background:var(--soft);
+}
 .day.empty{
   visibility:hidden;
 }
-
 .day.highlight{
   background:var(--pink);
   color:#fff;
@@ -454,69 +212,106 @@ body{
 }
 
 /* ================= DIRECTIONS ================= */
-
 .direction-card{
   width:100%;
   max-width:420px;
   margin-bottom:70px;
+  opacity:0;
+  transition:opacity .8s ease, transform .8s ease;
+  transform:translateY(30px);
 }
-
+.direction-card.visible{
+  opacity:1;
+  transform:translateY(0);
+}
 .direction-title{
   font-size:20px;
   letter-spacing:1px;
   margin-bottom:12px;
+  font-family:'Tenor Sans', sans-serif;
   font-weight:400;
 }
-
 .direction-time{
   font-size:38px;
   letter-spacing:3px;
   margin-bottom:22px;
   font-family:'Cormorant Garamond', serif;
+  font-weight:300;
 }
 
-.direction-photo{
+.direction-btn{
+  display:block;
   width:100%;
-  max-width:320px;
-  height:220px;
-  object-fit:cover;
-  border-radius:18px;
-  margin-bottom:24px;
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
-  transition:.4s;
-}
-
-.direction-photo:hover{
-  transform:translateY(-5px);
-}
-
-.map-btn{
-  display:inline-block;
-  padding:13px 34px;
-  border-radius:14px;
+  max-width:420px;
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 10px 35px rgba(0,0,0,.06);
   text-decoration:none;
   color:var(--dark);
-  border:1px solid rgba(0,0,0,.15);
-  transition:.35s;
-  letter-spacing:1px;
+  transition:transform .4s ease, box-shadow .4s ease;
+  cursor:pointer;
+  margin-bottom:70px;
+}
+.direction-btn:hover{
+  transform:translateY(-8px);
+  box-shadow:0 18px 50px rgba(0,0,0,.12);
+}
+.direction-btn-img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
+  transition:transform .5s ease;
+}
+.direction-btn:hover .direction-btn-img{
+  transform:scale(1.04);
+}
+.direction-btn-content{
+  padding:22px 20px;
+  text-align:center;
+}
+.direction-btn-title{
+  font-size:19px;
+  letter-spacing:.8px;
+  margin-bottom:8px;
+  font-family:'Tenor Sans', sans-serif;
+  font-weight:400;
+}
+.direction-btn-time{
+  font-size:34px;
+  letter-spacing:2px;
+  margin-bottom:14px;
+  font-family:'Cormorant Garamond', serif;
+  font-weight:300;
+}
+.map-btn-label{
+  display:inline-block;
+  padding:12px 30px;
+  border-radius:14px;
+  color:var(--dark);
+  border:1px solid rgba(0,0,0,.12);
+  letter-spacing:1.5px;
   font-size:11px;
   background:#fff;
+  transition:all .35s ease;
+  font-family:'Tenor Sans', sans-serif;
 }
-
-.map-btn:hover{
+.direction-btn:hover .map-btn-label{
   background:var(--dark);
   color:#fff;
+  border-color:var(--dark);
 }
 
 /* ================= COLLAGE ================= */
-
 .collage-wrapper{
   display:flex;
   align-items:center;
   justify-content:center;
   gap:14px;
+  width:100%;
+  max-width:520px;
 }
-
 .collage-photo{
   width:46%;
   max-width:240px;
@@ -524,45 +319,38 @@ body{
   overflow:hidden;
   border-radius:16px;
   box-shadow:0 10px 30px rgba(0,0,0,.08);
-  transition:.4s;
+  transition:all .45s ease;
 }
-
 .collage-photo:first-child{
   transform:rotate(-3deg);
 }
-
 .collage-photo:last-child{
   transform:rotate(3deg);
 }
-
 .collage-photo:hover{
-  transform:translateY(-6px) rotate(0deg);
+  transform:translateY(-8px) rotate(0deg);
+  box-shadow:0 18px 45px rgba(0,0,0,.14);
 }
-
 .collage-photo img{
   width:100%;
   height:100%;
   object-fit:cover;
-  transition:.4s;
+  transition:transform .5s ease;
 }
-
 .collage-photo:hover img{
-  transform:scale(1.05);
+  transform:scale(1.06);
 }
 
 /* ================= COUNTDOWN ================= */
-
 .countdown{
   background:#fff;
 }
-
 .count-title{
   font-family:'Cormorant Garamond', serif;
-  font-size:54px;
+  font-size:clamp(38px,10vw,54px);
   margin-bottom:35px;
   font-weight:400;
 }
-
 .count-grid{
   width:100%;
   max-width:800px;
@@ -570,41 +358,45 @@ body{
   grid-template-columns:repeat(4,1fr);
   gap:15px;
 }
-
 .count-item{
   background:var(--cream);
   border-radius:20px;
-  padding:22px 10px;
+  padding:24px 10px;
   box-shadow:0 5px 20px rgba(0,0,0,.03);
+  transition:transform .35s ease, box-shadow .35s ease;
 }
-
+.count-item:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 35px rgba(0,0,0,.07);
+}
 .count-number{
   font-size:clamp(32px,8vw,54px);
   font-family:'Cormorant Garamond', serif;
   margin-bottom:8px;
+  font-weight:400;
 }
-
 .count-label{
   font-size:10px;
-  letter-spacing:1px;
+  letter-spacing:1.5px;
   color:var(--gray);
+  text-transform:uppercase;
 }
 
 /* ================= FINAL ================= */
-
 .final{
   position:relative;
   min-height:100vh;
   overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
-
 .final-bg{
   position:absolute;
   inset:0;
   background:url('https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/8aa04e444f2d1b2ce0718516b0095e7c353f47d2/photo_5242604538437509147_y.jpg') center/cover no-repeat;
   filter:brightness(.55);
 }
-
 .final-content{
   position:relative;
   z-index:2;
@@ -612,13 +404,12 @@ body{
   text-align:center;
   padding:20px;
 }
-
 .final-small{
   font-size:18px;
   letter-spacing:2px;
   margin-bottom:18px;
+  font-weight:300;
 }
-
 .final-big{
   font-size:clamp(24px,5vw,42px);
   line-height:1.7;
@@ -627,458 +418,496 @@ body{
 }
 
 /* ================= FOOTER ================= */
-
 .footer{
   padding:28px;
   text-align:center;
 }
-
 .footer-text{
   font-family:'Cormorant Garamond', serif;
   font-size:28px;
   letter-spacing:2px;
+  font-weight:400;
 }
 
 /* ================= MOBILE ================= */
-
 @media(max-width:768px){
-
   .section{
     padding:65px 16px;
   }
-
-  .names{
-    font-size:58px;
+  .header{
+    min-height:90vh;
   }
-
+  .names{
+    font-size:clamp(42px,14vw,58px);
+  }
+  .subtitle{
+    font-size:10px;
+    letter-spacing:3px;
+  }
   .date{
     font-size:17px;
     letter-spacing:4px;
   }
-
   .invitation-text{
     font-size:18px;
     line-height:1.8;
+    padding:0 10px;
   }
-
   .calendar-box{
     padding:28px 16px;
+    border-radius:18px;
+    max-width:340px;
   }
-
   .month{
     font-size:20px;
   }
-
+  .day{
+    font-size:13px;
+  }
+  .direction-btn{
+    max-width:100%;
+    margin-bottom:50px;
+    border-radius:16px;
+  }
+  .direction-btn-img{
+    height:200px;
+  }
+  .direction-btn-content{
+    padding:18px 16px;
+  }
+  .direction-btn-title{
+    font-size:17px;
+  }
+  .direction-btn-time{
+    font-size:30px;
+  }
+  .map-btn-label{
+    padding:11px 26px;
+    font-size:10px;
+  }
+  .countdown{
+    padding:50px 12px;
+  }
+  .count-title{
+    font-size:clamp(32px,10vw,42px);
+    margin-bottom:28px;
+  }
   .count-grid{
     grid-template-columns:repeat(2,1fr);
     gap:12px;
+    max-width:340px;
   }
-
   .count-item{
-    padding:18px 8px;
+    padding:18px 6px;
+    border-radius:16px;
   }
-
   .count-number{
-    font-size:36px;
+    font-size:clamp(30px,10vw,38px);
   }
-
   .count-label{
     font-size:9px;
+    letter-spacing:1px;
   }
-
-  .direction-photo{
-    max-width:100%;
-    height:200px;
-  }
-
-  .direction-title{
-    font-size:18px;
-  }
-
-  .direction-time{
-    font-size:30px;
-  }
-
   .collage-wrapper{
     gap:10px;
+    padding:0 10px;
   }
-
   .collage-photo{
     width:48%;
+    border-radius:14px;
   }
-
+  .final{
+    min-height:80vh;
+  }
+  .final-small{
+    font-size:16px;
+  }
+  .final-big{
+    font-size:clamp(22px,6vw,32px);
+  }
+  .footer-text{
+    font-size:24px;
+  }
 }
 
 @media(max-width:480px){
-
-  .names{
-    font-size:46px;
+  .section{
+    padding:55px 12px;
   }
-
+  .lang-switcher{
+    top:10px;
+    right:10px;
+    padding:3px;
+  }
+  .lang-btn{
+    padding:6px 12px;
+    font-size:10px;
+  }
+  .names{
+    font-size:clamp(38px,13vw,48px);
+  }
+  .date{
+    font-size:15px;
+    letter-spacing:3px;
+  }
   .invitation-text{
     font-size:17px;
+    line-height:1.75;
   }
-
+  .calendar-box{
+    padding:22px 12px;
+    border-radius:16px;
+  }
+  .calendar-grid{
+    gap:5px;
+  }
+  .day{
+    font-size:12px;
+  }
+  .day-header{
+    font-size:9px;
+  }
+  .direction-btn{
+    margin-bottom:40px;
+    border-radius:14px;
+  }
+  .direction-btn-img{
+    height:170px;
+  }
+  .direction-btn-title{
+    font-size:16px;
+  }
+  .direction-btn-time{
+    font-size:28px;
+  }
   .count-title{
-    font-size:40px;
+    font-size:32px;
+    margin-bottom:22px;
   }
-
+  .count-grid{
+    max-width:300px;
+    gap:10px;
+  }
+  .count-item{
+    padding:16px 4px;
+  }
   .count-number{
-    font-size:30px;
+    font-size:28px;
   }
-
-  .direction-photo{
-    height:180px;
+  .collage-wrapper{
+    gap:8px;
   }
-
   .collage-photo:first-child{
     transform:rotate(-2deg);
   }
-
   .collage-photo:last-child{
     transform:rotate(2deg);
   }
-
+  .collage-photo{
+    border-radius:12px;
+  }
+  .final-small{
+    font-size:14px;
+    letter-spacing:1.5px;
+  }
+  .final-big{
+    font-size:22px;
+    line-height:1.6;
+    letter-spacing:1.5px;
+  }
+  .footer-text{
+    font-size:22px;
+  }
 }
 
+@media(max-width:360px){
+  .count-grid{
+    max-width:260px;
+  }
+  .count-number{
+    font-size:26px;
+  }
+  .count-label{
+    font-size:8px;
+  }
+  .direction-btn-img{
+    height:150px;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <!-- LANGUAGE -->
-
 <div class="lang-switcher">
-  <button class="lang-btn active" onclick="switchLang('hy')">HY</button>
-  <button class="lang-btn" onclick="switchLang('ru')">RU</button>
+  <button class="lang-btn active" onclick="switchLang('hy', this)">HY</button>
+  <button class="lang-btn" onclick="switchLang('ru', this)">RU</button>
 </div>
 
 <!-- HEADER -->
-
 <section class="header">
-
-<div class="header-bg"></div>
-<div class="overlay"></div>
-
-<div class="header-content">
-
-<div class="subtitle"
-data-hy="Հարսանիքի Հրավեր"
-data-ru="Свадебное Приглашение">
-Հարսանիքի Հրավեր
-</div>
-
-<div class="names"
-data-hy="Հակոբ & Անյա"
-data-ru="Акоб & Аня">
-Հակոբ & Անյա
-</div>
-
-<div class="date">17 . 07 . 2026</div>
-
-</div>
+  <div class="header-bg"></div>
+  <div class="overlay"></div>
+  <div class="header-content">
+    <div class="subtitle"
+      data-hy="Հարսանիքի Հրավեր"
+      data-ru="Свадебное Приглашение">
+      Հարսանիքի Հրավեր
+    </div>
+    <div class="names"
+      data-hy="Հակոբ &amp; Անя"
+      data-ru="Акоп &amp; Аня">
+      Հակոբ &amp; Անյա
+    </div>
+    <div class="date">17 . 07 . 2026</div>
+  </div>
 </section>
 
 <!-- INVITATION -->
-
 <section class="section">
-
-<div class="invitation-text"
-
-data-hy="Հարգելի հյուրեր։<br><br>Մոտենում է մեր կյանքի ամենագեղեցիկ և հիշարժան պահերից մեկը։ Մենք ընտանիք ենք կազմում և մեծ սիրով հրավիրում ենք Ձեզ կիսելու մեր երջանկությունը։"
-
-data-ru="Дорогие гости.<br><br>Приближается один из самых прекрасных и запоминающихся моментов нашей жизни. Мы создаём семью и с большой любовью приглашаем Вас разделить наше счастье и радость.">
-
-Հարգելի հյուրեր։<br><br>
-Մոտենում է մեր կյանքի ամենագեղեցիկ և հիշարժան պահերից մեկը։
-Մենք ընտանիք ենք կազմում և մեծ սիրով հրավիրում ենք Ձեզ
-կիսելու մեր երջանկությունը։
-
-</div>
-
+  <div class="invitation-text"
+    data-hy="Հարգելի հյուրեր։<br><br>Մոտենում է մեր կյանքի ամենագեղեցիկ և հիշարժան պահերից մեկը։ Մենք ընտանիք ենք կազմում և մեծ սիրով հրավիրում ենք Ձեզ կիսելու մեր երջանկությունը։"
+    data-ru="Дорогие гости.<br><br>Приближается один из самых прекрасных и запоминающихся моментов нашей жизни. Мы создаём семью и с большой любовью приглашаем Вас разделить наше счастье и радость.">
+    Հարգելի հյուրեր։<br><br>
+    Մոտենում է մեր կյանքի ամենագեղեցիկ և հիշարժան պահերից մեկը։
+    Մենք ընտանիք ենք կազմում և մեծ սիրով հրավիրում ենք Ձեզ
+    կիսելու մեր երջանկությունը։
+  </div>
 </section>
 
 <!-- CALENDAR -->
-
 <section class="section">
-
-<div class="calendar-box">
-
-<div class="month"
-data-hy="Հուլիս 2026"
-data-ru="Июль 2026">
-Հուլիս 2026
-</div>
-
-<div class="calendar-grid">
-
-<div class="day-header">ПН</div>
-<div class="day-header">ВТ</div>
-<div class="day-header">СР</div>
-<div class="day-header">ЧТ</div>
-<div class="day-header">ПТ</div>
-<div class="day-header">СБ</div>
-<div class="day-header">ВС</div>
-
-<div class="day empty"></div>
-<div class="day empty"></div>
-
-<div class="day">1</div>
-<div class="day">2</div>
-<div class="day">3</div>
-<div class="day">4</div>
-<div class="day">5</div>
-
-<div class="day">6</div>
-<div class="day">7</div>
-<div class="day">8</div>
-<div class="day">9</div>
-<div class="day">10</div>
-<div class="day">11</div>
-<div class="day">12</div>
-
-<div class="day">13</div>
-<div class="day">14</div>
-<div class="day">15</div>
-<div class="day">16</div>
-<div class="day highlight">17</div>
-<div class="day">18</div>
-<div class="day">19</div>
-
-<div class="day">20</div>
-<div class="day">21</div>
-<div class="day">22</div>
-<div class="day">23</div>
-<div class="day">24</div>
-<div class="day">25</div>
-<div class="day">26</div>
-
-<div class="day">27</div>
-<div class="day">28</div>
-<div class="day">29</div>
-<div class="day">30</div>
-<div class="day">31</div>
-
-</div>
-</div>
-
+  <div class="calendar-box">
+    <div class="month"
+      data-hy="Հուլիս 2026"
+      data-ru="Июль 2026">
+      Հուլիս 2026
+    </div>
+    <div class="calendar-grid">
+      <div class="day-header">ПН</div>
+      <div class="day-header">ВТ</div>
+      <div class="day-header">СР</div>
+      <div class="day-header">ЧТ</div>
+      <div class="day-header">ПТ</div>
+      <div class="day-header">СБ</div>
+      <div class="day-header">ВС</div>
+      <div class="day empty"></div>
+      <div class="day empty"></div>
+      <div class="day">1</div>
+      <div class="day">2</div>
+      <div class="day">3</div>
+      <div class="day">4</div>
+      <div class="day">5</div>
+      <div class="day">6</div>
+      <div class="day">7</div>
+      <div class="day">8</div>
+      <div class="day">9</div>
+      <div class="day">10</div>
+      <div class="day">11</div>
+      <div class="day">12</div>
+      <div class="day">13</div>
+      <div class="day">14</div>
+      <div class="day">15</div>
+      <div class="day">16</div>
+      <div class="day highlight">17</div>
+      <div class="day">18</div>
+      <div class="day">19</div>
+      <div class="day">20</div>
+      <div class="day">21</div>
+      <div class="day">22</div>
+      <div class="day">23</div>
+      <div class="day">24</div>
+      <div class="day">25</div>
+      <div class="day">26</div>
+      <div class="day">27</div>
+      <div class="day">28</div>
+      <div class="day">29</div>
+      <div class="day">30</div>
+      <div class="day">31</div>
+    </div>
+  </div>
 </section>
 
 <!-- CHURCH -->
-
 <section class="section">
-
-<div class="direction-card">
-
-<div class="direction-title"
-data-hy="Եկեղեցի՝ Սուրբ Երրորդություն"
-data-ru="Церковь — Святая Троица">
-Եկեղեցի՝ Սուրբ Երրորդություն
-</div>
-
-<div class="direction-time">15:00</div>
-
-<img class="direction-photo"
-src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/ab191a26dc1114a03167e42252ef7f8677aa55c8/1700209165720mainImg.jpg">
-
-<br>
-
-<a class="map-btn"
-href="https://yandex.com/maps/-/CPwo76JC"
-target="_blank"
-
-data-hy="Քարտեզ"
-data-ru="Карта">
-Քարտեզ
-</a>
-
-</div>
+  <a class="direction-btn" href="https://yandex.com/maps/-/CPwo76JC" target="_blank">
+    <img class="direction-btn-img"
+      src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/ab191a26dc1114a03167e42252ef7f8677aa55c8/1700209165720mainImg.jpg"
+      alt="Church">
+    <div class="direction-btn-content">
+      <div class="direction-btn-title"
+        data-hy="Եկեղեցի՝ Սուրբ Երրորդություն"
+        data-ru="Церковь — Святая Троица">
+        Եկեղեցի՝ Սուրբ Երրորդություն
+      </div>
+      <div class="direction-btn-time">15:00</div>
+      <span class="map-btn-label"
+        data-hy="Քարտեզ"
+        data-ru="Карта">
+        Քարտեզ
+      </span>
+    </div>
+  </a>
 
 <!-- RESTAURANT -->
-
-<div class="direction-card">
-
-<div class="direction-title"
-data-hy="Սրահ՝ Հրաշք Այգի"
-data-ru="Ресторан — Чудесный Сад">
-Սրահ՝ Հրաշք Այգի
-</div>
-
-<div class="direction-time">17:30</div>
-
-<img class="direction-photo"
-src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/ab191a26dc1114a03167e42252ef7f8677aa55c8/182765173_2740209479529041_8741023888127056283_n.jpg">
-
-<br>
-
-<a class="map-btn"
-href="https://yandex.com/maps/-/CPHaQKNa"
-target="_blank"
-
-data-hy="Քարտեզ"
-data-ru="Карта">
-Քարտեզ
-</a>
-
-</div>
-
+  <a class="direction-btn" href="https://yandex.com/maps/-/CPHaQKNa" target="_blank">
+    <img class="direction-btn-img"
+      src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/ab191a26dc1114a03167e42252ef7f8677aa55c8/182765173_2740209479529041_8741023888127056283_n.jpg"
+      alt="Restaurant">
+    <div class="direction-btn-content">
+      <div class="direction-btn-title"
+        data-hy="Սրահ՝ Հրաշք Այգի"
+        data-ru="Ресторан — Чудесный Сад">
+        Սրահ՝ Հրաշք Այգի
+      </div>
+      <div class="direction-btn-time">17:30</div>
+      <span class="map-btn-label"
+        data-hy="Քարտեզ"
+        data-ru="Карта">
+        Քարտեզ
+      </span>
+    </div>
+  </a>
 </section>
 
 <!-- COLLAGE -->
-
 <section class="section">
-
-<div class="collage-wrapper">
-
-<div class="collage-photo">
-<img src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/7617bfbca30e62f74ca10db162ab343dae72e420/photo_5242604538437509149_y.jpg">
-</div>
-
-<div class="collage-photo">
-<img src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/7617bfbca30e62f74ca10db162ab343dae72e420/photo_5242604538437509148_y.jpg">
-</div>
-
-</div>
-
+  <div class="collage-wrapper">
+    <div class="collage-photo">
+      <img src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/7617bfbca30e62f74ca10db162ab343dae72e420/photo_5242604538437509149_y.jpg" alt="Photo 1">
+    </div>
+    <div class="collage-photo">
+      <img src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/7617bfbca30e62f74ca10db162ab343dae72e420/photo_5242604538437509148_y.jpg" alt="Photo 2">
+    </div>
+  </div>
 </section>
 
 <!-- COUNTDOWN -->
-
 <section class="section countdown">
-
-<div class="count-title"
-data-hy="Մինչև մեր օրը"
-data-ru="До нашего дня">
-Մինչև մեր օրը
-</div>
-
-<div class="count-grid">
-
-<div class="count-item">
-<div class="count-number" id="days">00</div>
-<div class="count-label"
-data-hy="ՕՐ"
-data-ru="ДНЕЙ">
-ՕՐ
-</div>
-</div>
-
-<div class="count-item">
-<div class="count-number" id="hours">00</div>
-<div class="count-label"
-data-hy="ԺԱՄ"
-data-ru="ЧАСОВ">
-ԺԱՄ
-</div>
-</div>
-
-<div class="count-item">
-<div class="count-number" id="minutes">00</div>
-<div class="count-label"
-data-hy="ՐՈՊԵ"
-data-ru="МИНУТ">
-ՐՈՊԵ
-</div>
-</div>
-
-<div class="count-item">
-<div class="count-number" id="seconds">00</div>
-<div class="count-label"
-data-hy="ՎԱՅՐԿՅԱՆ"
-data-ru="СЕКУНД">
-ՎԱՅՐԿՅԱՆ
-</div>
-</div>
-
-</div>
-
+  <div class="count-title"
+    data-hy="Մինչև մեր օրը"
+    data-ru="До нашего дня">
+    Մինչև մեր օրը
+  </div>
+  <div class="count-grid">
+    <div class="count-item">
+      <div class="count-number" id="days">00</div>
+      <div class="count-label"
+        data-hy="ՕՐ"
+        data-ru="ДНЕЙ">
+        ՕՐ
+      </div>
+    </div>
+    <div class="count-item">
+      <div class="count-number" id="hours">00</div>
+      <div class="count-label"
+        data-hy="ԺԱՄ"
+        data-ru="ЧАСОВ">
+        ԺԱՄ
+      </div>
+    </div>
+    <div class="count-item">
+      <div class="count-number" id="minutes">00</div>
+      <div class="count-label"
+        data-hy="ՐՈՊԵ"
+        data-ru="МИНУТ">
+        ՐՈՊԵ
+      </div>
+    </div>
+    <div class="count-item">
+      <div class="count-number" id="seconds">00</div>
+      <div class="count-label"
+        data-hy="ՎԱՅՐԿՅԱՆ"
+        data-ru="СЕКУНД">
+        ՎԱՅՐԿՅԱՆ
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- FINAL -->
-
 <section class="final">
-
-<div class="final-bg"></div>
-<div class="overlay"></div>
-
-<div class="final-content">
-
-<div class="final-small"
-data-hy="Ձեզ հետ բերեք"
-data-ru="Возьмите с собой">
-Ձեզ հետ բերեք
-</div>
-
-<div class="final-big"
-data-hy="ՍԵՐ, ԺՊԻՏՆԵՐ և ԴՐԱԿԱՆ ԷՄՈՑԻԱՆԵՐ"
-data-ru="ЛЮБОВЬ, УЛЫБКИ И ПОЛОЖИТЕЛЬНЫЕ ЭМОЦИИ">
-ՍԵՐ, ԺՊԻՏՆԵՐ և ԴՐԱԿԱՆ ԷՄՈՑԻԱՆԵՐ
-</div>
-
-</div>
-
+  <div class="final-bg"></div>
+  <div class="overlay"></div>
+  <div class="final-content">
+    <div class="final-small"
+      data-hy="Ձեզ հետ բերեք"
+      data-ru="Возьмите с собой">
+      Ձեզ հետ բերեք
+    </div>
+    <div class="final-big"
+      data-hy="ՍԵՐ, ԺՊԻՏՆԵՐ և ԴՐԱԿԱՆ ԷՄՈՑԻԱՆԵՐ"
+      data-ru="ЛЮБОВЬ, УЛЫБКИ И ПОЛОЖИТЕЛЬНЫЕ ЭМОЦИИ">
+      ՍԵՐ, ԺՊԻՏՆԵՐ և ԴՐԱԿԱՆ ԷՄՈՑԻԱՆԵՐ
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
-
 <div class="footer">
-
-<div class="footer-text"
-data-hy="Հակոբ & Անյա"
-data-ru="Акоб & Аня">
-Հակոբ & Անյա
-</div>
-
+  <div class="footer-text"
+    data-hy="Հակոբ &amp; Անյա"
+    data-ru="Акоп &amp; Аня">
+    Հակոբ &amp; Անյա
+  </div>
 </div>
 
 <script>
-
 /* LANGUAGE */
+function switchLang(lang, btn){
+  document.querySelectorAll('.lang-btn').forEach(b=>{
+    b.classList.remove('active');
+  });
+  btn.classList.add('active');
 
-function switchLang(lang){
-
-document.querySelectorAll('.lang-btn').forEach(btn=>{
-btn.classList.remove('active');
-});
-
-event.target.classList.add('active');
-
-document.querySelectorAll('[data-hy]').forEach(el=>{
-
-if(lang === 'hy'){
-el.innerHTML = el.dataset.hy;
-}else{
-el.innerHTML = el.dataset.ru;
-}
-
-});
-
+  document.querySelectorAll('[data-hy]').forEach(el=>{
+    if(lang === 'hy'){
+      el.innerHTML = el.dataset.hy;
+    } else {
+      el.innerHTML = el.dataset.ru;
+    }
+  });
 }
 
 /* COUNTDOWN */
-
 const weddingDate = new Date("2026-07-17T15:00:00").getTime();
 
 function updateCountdown(){
+  const now = new Date().getTime();
+  const distance = weddingDate - now;
 
-const now = new Date().getTime();
-const distance = weddingDate - now;
+  const d = Math.floor(distance / (1000*60*60*24));
+  const h = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+  const m = Math.floor((distance % (1000*60*60)) / (1000*60));
+  const s = Math.floor((distance % (1000*60)) / 1000);
 
-const days = Math.floor(distance / (1000*60*60*24));
-const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
-const seconds = Math.floor((distance % (1000*60)) / 1000);
-
-document.getElementById("days").innerHTML = days;
-document.getElementById("hours").innerHTML = hours;
-document.getElementById("minutes").innerHTML = minutes;
-document.getElementById("seconds").innerHTML = seconds;
-
+  document.getElementById("days").innerHTML = d;
+  document.getElementById("hours").innerHTML = h;
+  document.getElementById("minutes").innerHTML = m;
+  document.getElementById("seconds").innerHTML = s;
 }
 
 updateCountdown();
-setInterval(updateCountdown,1000);
+setInterval(updateCountdown, 1000);
 
+/* SCROLL ANIMATIONS */
+const observerOptions = {
+  threshold: 0.15,
+  rootMargin: '0px 0px -40px 0px'
+};
+
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.invitation-text, .direction-card').forEach(el=>{
+  observer.observe(el);
+});
 </script>
 
 </body>
