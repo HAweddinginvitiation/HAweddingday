@@ -4,31 +4,63 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Հակոբ & Անյա | 17.07.2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@200;300;400&family=Tenor+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@200;300;400&family=Tenor+Sans&display=swap" rel="stylesheet">
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --cream:#faf8f5;
-  --white:#ffffff;
-  --soft:#f2e6df;
-  --dark:#171717;
-  --gray:#888;
-  --pink:#e7c2cb;
+  --champagne:#f8f0e4;
+  --cream:#faf6f0;
+  --blush:#f0d5c8;
+  --rose:#d4a59a;
+  --dark:#2a2220;
+  --text:#3d3230;
+  --gray:#9a8e8a;
+  --soft-pink:#f5e1d8;
+  --gold:#c9a87c;
 }
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 body{
   font-family:'Tenor Sans','Montserrat',sans-serif;
   background:var(--cream);
-  color:var(--dark);
+  color:var(--text);
   overflow-x:hidden;
   font-weight:300;
   -webkit-font-smoothing:antialiased;
+}
+
+/* ================= WEDDING BG ================= */
+.wedding-bg{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(212,165,154,.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 40%, rgba(201,168,124,.1) 0%, transparent 45%),
+    radial-gradient(ellipse at 30% 90%, rgba(240,213,200,.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(245,225,216,.12) 0%, transparent 40%),
+    linear-gradient(180deg, #faf6f0 0%, #f8f0e4 40%, #f5ebe0 100%);
+}
+
+/* ================= FLOATING ICONS ================= */
+.floating-icons{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  overflow:hidden;
+}
+.float-icon{
+  position:absolute;
+  bottom:-60px;
+  opacity:0;
+  animation:floatUp linear infinite;
+}
+@keyframes floatUp{
+  0%{transform:translateY(0) rotate(0deg);opacity:0}
+  8%{opacity:.1}
+  92%{opacity:.1}
+  100%{transform:translateY(-115vh) rotate(40deg);opacity:0}
 }
 
 /* ================= LANGUAGE ================= */
@@ -37,39 +69,43 @@ body{
   top:15px;
   right:15px;
   z-index:999;
-  background:rgba(255,255,255,.92);
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
   border-radius:30px;
-  padding:5px;
+  padding:4px;
   display:flex;
-  gap:4px;
-  box-shadow:0 4px 24px rgba(0,0,0,.06);
+  gap:3px;
+  box-shadow:0 2px 20px rgba(42,34,32,.06);
+  border:1px solid rgba(201,168,124,.15);
 }
 .lang-btn{
   border:none;
   background:transparent;
-  padding:8px 16px;
+  padding:7px 14px;
   border-radius:20px;
   cursor:pointer;
   font-size:11px;
   letter-spacing:1.5px;
   transition:all .3s ease;
-  color:var(--dark);
+  color:var(--text);
   font-family:'Tenor Sans',sans-serif;
   font-weight:400;
 }
 .lang-btn:hover{
-  background:rgba(23,23,23,.08);
+  background:rgba(201,168,124,.12);
+  transform:scale(1.06);
 }
 .lang-btn.active{
   background:var(--dark);
   color:#fff;
-  box-shadow:0 2px 10px rgba(0,0,0,.15);
+  box-shadow:0 2px 12px rgba(42,34,32,.18);
 }
 
 /* ================= GENERAL ================= */
 .section{
+  position:relative;
+  z-index:1;
   padding:80px 20px;
   display:flex;
   flex-direction:column;
@@ -86,563 +122,482 @@ body{
   align-items:center;
   justify-content:center;
   overflow:hidden;
+  z-index:1;
 }
 .header-bg{
   position:absolute;
   inset:0;
   background:url('https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/7617bfbca30e62f74ca10db162ab343dae72e420/photo_5242604538437509150_y.jpg') center/cover no-repeat;
-  filter:brightness(.58);
-  transition:transform 8s ease;
+  filter:brightness(.55) saturate(.9);
+  transition:transform 12s ease;
 }
-.header:hover .header-bg{
-  transform:scale(1.04);
-}
-.overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,.18);
-}
-.header-content{
-  position:relative;
-  z-index:2;
-  color:#fff;
-  text-align:center;
-  padding:20px;
-}
+.header:hover .header-bg{transform:scale(1.06)}
+.overlay{position:absolute;inset:0;background:rgba(42,34,32,.12)}
+.header-content{position:relative;z-index:2;color:#fff;text-align:center;padding:20px}
 .subtitle{
-  font-size:11px;
-  letter-spacing:4px;
-  text-transform:uppercase;
-  margin-bottom:18px;
-  font-weight:300;
-  opacity:0;
-  animation:fadeUp .8s ease forwards .3s;
+  font-size:11px;letter-spacing:4px;text-transform:uppercase;
+  margin-bottom:18px;font-weight:300;opacity:0;
+  animation:fadeUp .9s ease forwards .3s;
 }
 .names{
-  font-family:'Cormorant Garamond', serif;
-  font-size:clamp(48px,12vw,92px);
-  line-height:1.1;
-  letter-spacing:2px;
-  font-weight:400;
-  opacity:0;
-  animation:fadeUp .8s ease forwards .5s;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(48px,12vw,92px);line-height:1.1;
+  letter-spacing:2px;font-weight:400;opacity:0;
+  animation:fadeUp .9s ease forwards .6s;
 }
 .date{
-  margin-top:24px;
-  font-size:20px;
-  letter-spacing:6px;
-  font-family:'Cormorant Garamond', serif;
-  font-weight:300;
-  opacity:0;
-  animation:fadeUp .8s ease forwards .7s;
+  margin-top:24px;font-size:20px;letter-spacing:6px;
+  font-family:'Cormorant Garamond',serif;font-weight:300;
+  opacity:0;animation:fadeUp .9s ease forwards .9s;
 }
 @keyframes fadeUp{
-  from{opacity:0;transform:translateY(25px);}
-  to{opacity:1;transform:translateY(0);}
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
 }
+.scroll-hint{
+  position:absolute;bottom:30px;left:50%;transform:translateX(-50%);
+  z-index:3;color:rgba(255,255,255,.5);font-size:10px;
+  letter-spacing:3px;text-transform:uppercase;
+  animation:bounce 2s ease-in-out infinite;font-family:'Montserrat',sans-serif;
+}
+.scroll-hint::after{
+  content:'';display:block;width:1px;height:30px;
+  background:rgba(255,255,255,.3);margin:10px auto 0;
+}
+@keyframes bounce{
+  0%,100%{transform:translateX(-50%) translateY(0)}
+  50%{transform:translateX(-50%) translateY(12px)}
+}
+
+/* ================= RINGS DIVIDER ================= */
+.rings-divider{
+  margin:30px auto;
+  position:relative;
+  height:30px;
+  width:60px;
+  opacity:.4;
+  transition:opacity .4s ease, transform .4s ease;
+}
+.rings-divider:hover{opacity:.7;transform:scale(1.15)}
+.rings-divider svg{width:100%;height:100%}
 
 /* ================= INVITATION ================= */
 .invitation-text{
-  max-width:620px;
-  font-size:22px;
-  line-height:1.9;
-  font-family:'Cormorant Garamond', serif;
-  font-weight:300;
-  opacity:0;
+  max-width:620px;font-size:22px;line-height:1.9;
+  font-family:'Cormorant Garamond',serif;font-weight:300;
+  opacity:0;transform:translateY(30px);
   transition:opacity .8s ease, transform .8s ease;
 }
-.invitation-text.visible{
-  opacity:1;
-  transform:translateY(0);
-}
-.invitation-text{
-  transform:translateY(30px);
-}
+.invitation-text.visible{opacity:1;transform:translateY(0)}
 
-/* ================= CALENDAR ================= */
-.calendar-box{
+/* ================= iOS CALENDAR ================= */
+.calendar-container{
+  background:#fff;width:100%;max-width:380px;
+  border-radius:28px;padding:36px 20px 28px;
+  box-shadow:0 12px 48px rgba(42,34,32,.06);
+  transition:transform .4s ease, box-shadow .4s ease;
+  position:relative;overflow:hidden;
+  border:1px solid rgba(201,168,124,.12);
+}
+.calendar-container:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 60px rgba(42,34,32,.1);
+}
+.calendar-container::before{
+  content:'';position:absolute;top:0;left:50%;
+  transform:translateX(-50%);width:36px;height:3px;
+  background:var(--gray);border-radius:2px;opacity:.2;
+}
+.ios-month{
+  font-size:18px;font-weight:400;letter-spacing:.5px;
+  margin-bottom:24px;color:var(--text);
+  font-family:'Tenor Sans',sans-serif;
+}
+.ios-weekdays{
+  display:grid;grid-template-columns:repeat(7,1fr);
+  gap:0;margin-bottom:10px;
+}
+.ios-weekday{
+  font-size:9px;letter-spacing:1px;color:var(--gray);
+  text-align:center;font-weight:400;
+  font-family:'Montserrat',sans-serif;
+}
+.ios-days{
+  display:grid;grid-template-columns:repeat(7,1fr);gap:4px;
+}
+.ios-day{
+  aspect-ratio:1;display:flex;align-items:center;
+  justify-content:center;border-radius:50%;font-size:15px;
+  font-family:'Cormorant Garamond',serif;font-weight:400;
+  color:var(--text);transition:all .25s ease;cursor:default;
+  position:relative;
+}
+.ios-day:not(.empty):hover{
+  background:rgba(201,168,124,.08);transform:scale(1.12);
+}
+.ios-day.empty{visibility:hidden}
+.ios-day.today{background:transparent}
+.ios-day.today::after{
+  content:'';position:absolute;width:48px;height:48px;
+  background:radial-gradient(ellipse at center,rgba(240,213,200,.6) 0%,rgba(212,165,154,.2) 55%,transparent 75%);
+  border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
+  transform:translate(-50%,-50%) rotate(-8deg);
+  left:50%;top:50%;filter:blur(4px);
+  animation:heartPulse 3s ease-in-out infinite;
+}
+@keyframes heartPulse{
+  0%,100%{transform:translate(-50%,-50%) rotate(-8deg) scale(1);opacity:.7}
+  50%{transform:translate(-50%,-50%) rotate(-8deg) scale(1.12);opacity:1}
+}
+.ios-day.today span{position:relative;z-index:2;color:var(--text);font-weight:500}
+
+/* ================= DIRECTION CARDS ================= */
+.direction-card{
+  width:100%;max-width:420px;margin-bottom:45px;
+  perspective:800px;
+}
+.direction-card-inner{
   background:#fff;
-  width:100%;
-  max-width:420px;
-  border-radius:22px;
-  padding:32px 18px;
-  box-shadow:0 10px 40px rgba(0,0,0,.04);
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 8px 35px rgba(42,34,32,.05);
+  transition:all .5s cubic-bezier(.25,.46,.45,.94);
+  cursor:pointer;
+  text-decoration:none;
+  color:var(--text);
+  display:block;
+  border:1px solid rgba(201,168,124,.08);
+  animation:appearCard .6s ease forwards;
+  opacity:0;
+  transform:translateY(40px);
+}
+@keyframes appearCard{
+  to{opacity:1;transform:translateY(0)}
+}
+.direction-card:nth-child(2) .direction-card-inner{
+  animation-delay:.15s;
+}
+.direction-card-inner:hover{
+  transform:translateY(-12px) scale(1.02);
+  box-shadow:0 22px 60px rgba(42,34,32,.12);
+  border-color:rgba(201,168,124,.2);
+}
+.direction-card-img-wrap{
+  overflow:hidden;position:relative;
+}
+.direction-card-img{
+  width:100%;height:210px;object-fit:cover;display:block;
+  transition:transform .7s ease, filter .4s ease;
+}
+.direction-card-inner:hover .direction-card-img{
+  transform:scale(1.06);
+  filter:saturate(1.05);
+}
+.direction-card-img-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to bottom,transparent 50%,rgba(42,34,32,.15) 100%);
+  opacity:0;transition:opacity .4s ease;
+}
+.direction-card-inner:hover .direction-card-img-overlay{
+  opacity:1;
+}
+.direction-card-badge{
+  position:absolute;top:16px;left:16px;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  border-radius:30px;
+  padding:6px 14px;
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--text);
+  opacity:0;
+  transform:translateX(-15px);
+  transition:all .4s ease .1s;
+  border:1px solid rgba(201,168,124,.15);
+}
+.direction-card-inner:hover .direction-card-badge{
+  opacity:1;transform:translateX(0);
+}
+.direction-card-content{
+  padding:24px 22px 26px;
+  text-align:center;
+  position:relative;
+}
+.direction-card-icon{
+  width:40px;height:40px;
+  margin:0 auto 14px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--soft-pink),var(--blush));
+  display:flex;align-items:center;justify-content:center;
   transition:transform .3s ease, box-shadow .3s ease;
 }
-.calendar-box:hover{
-  transform:translateY(-4px);
-  box-shadow:0 14px 48px rgba(0,0,0,.07);
+.direction-card-inner:hover .direction-card-icon{
+  transform:scale(1.15) rotate(5deg);
+  box-shadow:0 6px 20px rgba(212,165,154,.35);
 }
-.month{
-  font-size:22px;
-  margin-bottom:28px;
-  letter-spacing:2px;
+.direction-card-icon svg{
+  width:20px;height:20px;
+}
+.direction-card-title{
+  font-size:18px;letter-spacing:.6px;
+  margin-bottom:6px;font-family:'Tenor Sans',sans-serif;
   font-weight:400;
+  transition:letter-spacing .3s ease;
 }
-.calendar-grid{
-  display:grid;
-  grid-template-columns:repeat(7,1fr);
-  gap:8px;
-}
-.day-header{
-  font-size:10px;
-  color:var(--gray);
-  letter-spacing:1px;
-}
-.day{
-  aspect-ratio:1;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  font-size:14px;
-  transition:transform .25s ease;
-}
-.day:not(.empty):not(.highlight):hover{
-  transform:scale(1.15);
-  background:var(--soft);
-}
-.day.empty{
-  visibility:hidden;
-}
-.day.highlight{
-  background:var(--pink);
-  color:#fff;
-  box-shadow:0 4px 18px rgba(231,194,203,.6);
-}
-
-/* ================= DIRECTIONS ================= */
-.direction-card{
-  width:100%;
-  max-width:420px;
-  margin-bottom:70px;
-  opacity:0;
-  transition:opacity .8s ease, transform .8s ease;
-  transform:translateY(30px);
-}
-.direction-card.visible{
-  opacity:1;
-  transform:translateY(0);
-}
-.direction-title{
-  font-size:20px;
-  letter-spacing:1px;
-  margin-bottom:12px;
-  font-family:'Tenor Sans', sans-serif;
-  font-weight:400;
-}
-.direction-time{
-  font-size:38px;
-  letter-spacing:3px;
-  margin-bottom:22px;
-  font-family:'Cormorant Garamond', serif;
-  font-weight:300;
-}
-
-.direction-btn{
-  display:block;
-  width:100%;
-  max-width:420px;
-  background:#fff;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 10px 35px rgba(0,0,0,.06);
-  text-decoration:none;
-  color:var(--dark);
-  transition:transform .4s ease, box-shadow .4s ease;
-  cursor:pointer;
-  margin-bottom:70px;
-}
-.direction-btn:hover{
-  transform:translateY(-8px);
-  box-shadow:0 18px 50px rgba(0,0,0,.12);
-}
-.direction-btn-img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  display:block;
-  transition:transform .5s ease;
-}
-.direction-btn:hover .direction-btn-img{
-  transform:scale(1.04);
-}
-.direction-btn-content{
-  padding:22px 20px;
-  text-align:center;
-}
-.direction-btn-title{
-  font-size:19px;
-  letter-spacing:.8px;
-  margin-bottom:8px;
-  font-family:'Tenor Sans', sans-serif;
-  font-weight:400;
-}
-.direction-btn-time{
-  font-size:34px;
-  letter-spacing:2px;
-  margin-bottom:14px;
-  font-family:'Cormorant Garamond', serif;
-  font-weight:300;
-}
-.map-btn-label{
-  display:inline-block;
-  padding:12px 30px;
-  border-radius:14px;
-  color:var(--dark);
-  border:1px solid rgba(0,0,0,.12);
+.direction-card-inner:hover .direction-card-title{
   letter-spacing:1.5px;
-  font-size:11px;
-  background:#fff;
-  transition:all .35s ease;
-  font-family:'Tenor Sans', sans-serif;
 }
-.direction-btn:hover .map-btn-label{
+.direction-card-time{
+  font-size:32px;letter-spacing:2px;
+  margin-bottom:16px;font-family:'Cormorant Garamond',serif;
+  font-weight:300;
+  transition:transform .3s ease;
+}
+.direction-card-inner:hover .direction-card-time{
+  transform:scale(1.05);
+}
+.map-btn{
+  display:inline-block;padding:12px 32px;
+  border-radius:14px;color:var(--text);
+  border:1.5px solid rgba(201,168,124,.25);
+  letter-spacing:1.5px;font-size:11px;
+  background:transparent;
+  transition:all .4s ease;
+  font-family:'Tenor Sans',sans-serif;
+  position:relative;
+  overflow:hidden;
+}
+.map-btn::before{
+  content:'';position:absolute;inset:0;
   background:var(--dark);
-  color:#fff;
-  border-color:var(--dark);
+  transform:scaleX(0);transform-origin:right;
+  transition:transform .4s cubic-bezier(.25,.46,.45,.94);
+  z-index:0;
+}
+.map-btn:hover::before{transform:scaleX(1);transform-origin:left}
+.map-btn:hover{
+  color:#fff;border-color:var(--dark);
+}
+.map-btn span{position:relative;z-index:1}
+.direction-card-inner:hover .map-btn{
+  animation:pulseBtn 2s ease-in-out infinite;
+}
+@keyframes pulseBtn{
+  0%,100%{box-shadow:0 0 0 0 rgba(42,34,32,.15)}
+  50%{box-shadow:0 0 0 8px rgba(42,34,32,0)}
 }
 
 /* ================= COLLAGE ================= */
 .collage-wrapper{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:14px;
-  width:100%;
-  max-width:520px;
+  display:flex;align-items:center;justify-content:center;
+  gap:16px;width:100%;max-width:520px;
 }
 .collage-photo{
-  width:46%;
-  max-width:240px;
-  aspect-ratio:3/4;
-  overflow:hidden;
-  border-radius:16px;
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
-  transition:all .45s ease;
+  width:46%;max-width:240px;aspect-ratio:3/4;
+  overflow:hidden;border-radius:16px;
+  box-shadow:0 12px 35px rgba(42,34,32,.08);
+  transition:all .5s ease;
+  border:2px solid #fff;
 }
-.collage-photo:first-child{
-  transform:rotate(-3deg);
-}
-.collage-photo:last-child{
-  transform:rotate(3deg);
-}
+.collage-photo:first-child{transform:rotate(-3deg)}
+.collage-photo:last-child{transform:rotate(3deg)}
 .collage-photo:hover{
-  transform:translateY(-8px) rotate(0deg);
-  box-shadow:0 18px 45px rgba(0,0,0,.14);
+  transform:translateY(-10px) rotate(0deg) scale(1.02);
+  box-shadow:0 24px 55px rgba(42,34,32,.15);
 }
 .collage-photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:transform .5s ease;
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .6s ease;
 }
-.collage-photo:hover img{
-  transform:scale(1.06);
-}
+.collage-photo:hover img{transform:scale(1.08)}
 
 /* ================= COUNTDOWN ================= */
 .countdown{
-  background:#fff;
+  background:rgba(255,255,255,.5);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-top:1px solid rgba(201,168,124,.1);
+  border-bottom:1px solid rgba(201,168,124,.1);
 }
 .count-title{
-  font-family:'Cormorant Garamond', serif;
+  font-family:'Cormorant Garamond',serif;
   font-size:clamp(38px,10vw,54px);
-  margin-bottom:35px;
-  font-weight:400;
+  margin-bottom:35px;font-weight:400;
+  position:relative;
+}
+.count-title::after{
+  content:'';display:block;width:40px;height:1px;
+  background:var(--gold);margin:16px auto 0;opacity:.5;
 }
 .count-grid{
-  width:100%;
-  max-width:800px;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:15px;
+  width:100%;max-width:800px;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
 }
 .count-item{
-  background:var(--cream);
-  border-radius:20px;
-  padding:24px 10px;
-  box-shadow:0 5px 20px rgba(0,0,0,.03);
-  transition:transform .35s ease, box-shadow .35s ease;
+  background:rgba(255,255,255,.65);
+  border-radius:22px;padding:26px 10px;
+  box-shadow:0 4px 20px rgba(42,34,32,.02);
+  transition:all .4s ease;border:1px solid rgba(201,168,124,.08);
+  cursor:default;position:relative;overflow:hidden;
 }
+.count-item::before{
+  content:'';position:absolute;top:-50%;left:-50%;
+  width:200%;height:200%;
+  background:radial-gradient(circle,rgba(212,165,154,.06) 0%,transparent 60%);
+  opacity:0;transition:opacity .4s ease;
+}
+.count-item:hover::before{opacity:1}
 .count-item:hover{
-  transform:translateY(-6px);
-  box-shadow:0 12px 35px rgba(0,0,0,.07);
+  transform:translateY(-8px);
+  box-shadow:0 16px 45px rgba(42,34,32,.08);
+  background:rgba(255,255,255,.9);
 }
 .count-number{
   font-size:clamp(32px,8vw,54px);
-  font-family:'Cormorant Garamond', serif;
-  margin-bottom:8px;
-  font-weight:400;
+  font-family:'Cormorant Garamond',serif;
+  margin-bottom:8px;font-weight:400;
+  transition:transform .3s ease;
+  position:relative;
 }
+.count-item:hover .count-number{transform:scale(1.08)}
 .count-label{
-  font-size:10px;
-  letter-spacing:1.5px;
-  color:var(--gray);
-  text-transform:uppercase;
+  font-size:10px;letter-spacing:1.5px;
+  color:var(--gray);text-transform:uppercase;
 }
 
 /* ================= FINAL ================= */
 .final{
-  position:relative;
-  min-height:100vh;
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  position:relative;min-height:100vh;
+  overflow:hidden;display:flex;
+  align-items:center;justify-content:center;z-index:1;
 }
 .final-bg{
-  position:absolute;
-  inset:0;
+  position:absolute;inset:0;
   background:url('https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/8aa04e444f2d1b2ce0718516b0095e7c353f47d2/photo_5242604538437509147_y.jpg') center/cover no-repeat;
-  filter:brightness(.55);
+  filter:brightness(.5) saturate(.85);
+  transition:transform 12s ease;
 }
+.final:hover .final-bg{transform:scale(1.06)}
 .final-content{
-  position:relative;
-  z-index:2;
-  color:#fff;
-  text-align:center;
-  padding:20px;
+  position:relative;z-index:2;color:#fff;
+  text-align:center;padding:20px;
 }
 .final-small{
-  font-size:18px;
-  letter-spacing:2px;
-  margin-bottom:18px;
-  font-weight:300;
+  font-size:18px;letter-spacing:2px;
+  margin-bottom:18px;font-weight:300;
 }
 .final-big{
   font-size:clamp(24px,5vw,42px);
-  line-height:1.7;
-  letter-spacing:2px;
-  font-weight:300;
+  line-height:1.7;letter-spacing:2px;font-weight:300;
 }
 
 /* ================= FOOTER ================= */
 .footer{
-  padding:28px;
-  text-align:center;
+  padding:28px;text-align:center;
+  position:relative;z-index:1;
 }
 .footer-text{
-  font-family:'Cormorant Garamond', serif;
-  font-size:28px;
-  letter-spacing:2px;
-  font-weight:400;
+  font-family:'Cormorant Garamond',serif;
+  font-size:28px;letter-spacing:2px;font-weight:400;
 }
 
 /* ================= MOBILE ================= */
 @media(max-width:768px){
-  .section{
-    padding:65px 16px;
+  .section{padding:65px 16px}
+  .header{min-height:95vh}
+  .names{font-size:clamp(42px,14vw,58px)}
+  .subtitle{font-size:10px;letter-spacing:3px}
+  .date{font-size:17px;letter-spacing:4px}
+  .invitation-text{font-size:18px;line-height:1.8;padding:0 8px}
+  .calendar-container{
+    max-width:340px;padding:30px 16px 24px;
+    border-radius:22px;margin:0 4px;
   }
-  .header{
-    min-height:90vh;
-  }
-  .names{
-    font-size:clamp(42px,14vw,58px);
-  }
-  .subtitle{
-    font-size:10px;
-    letter-spacing:3px;
-  }
-  .date{
-    font-size:17px;
-    letter-spacing:4px;
-  }
-  .invitation-text{
-    font-size:18px;
-    line-height:1.8;
-    padding:0 10px;
-  }
-  .calendar-box{
-    padding:28px 16px;
-    border-radius:18px;
-    max-width:340px;
-  }
-  .month{
-    font-size:20px;
-  }
-  .day{
-    font-size:13px;
-  }
-  .direction-btn{
-    max-width:100%;
-    margin-bottom:50px;
-    border-radius:16px;
-  }
-  .direction-btn-img{
-    height:200px;
-  }
-  .direction-btn-content{
-    padding:18px 16px;
-  }
-  .direction-btn-title{
-    font-size:17px;
-  }
-  .direction-btn-time{
-    font-size:30px;
-  }
-  .map-btn-label{
-    padding:11px 26px;
-    font-size:10px;
-  }
-  .countdown{
-    padding:50px 12px;
-  }
-  .count-title{
-    font-size:clamp(32px,10vw,42px);
-    margin-bottom:28px;
-  }
-  .count-grid{
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-    max-width:340px;
-  }
-  .count-item{
-    padding:18px 6px;
-    border-radius:16px;
-  }
-  .count-number{
-    font-size:clamp(30px,10vw,38px);
-  }
-  .count-label{
-    font-size:9px;
-    letter-spacing:1px;
-  }
-  .collage-wrapper{
-    gap:10px;
-    padding:0 10px;
-  }
-  .collage-photo{
-    width:48%;
-    border-radius:14px;
-  }
-  .final{
-    min-height:80vh;
-  }
-  .final-small{
-    font-size:16px;
-  }
-  .final-big{
-    font-size:clamp(22px,6vw,32px);
-  }
-  .footer-text{
-    font-size:24px;
-  }
+  .ios-month{font-size:16px;margin-bottom:20px}
+  .ios-weekday{font-size:8px}
+  .ios-day{font-size:14px}
+  .ios-day.today::after{width:42px;height:42px}
+  .direction-card{margin-bottom:40px}
+  .direction-card-inner{border-radius:20px}
+  .direction-card-img{height:185px}
+  .direction-card-badge{opacity:1;transform:translateX(0)}
+  .direction-card-icon{width:36px;height:36px;margin-bottom:10px}
+  .direction-card-title{font-size:17px}
+  .direction-card-time{font-size:28px}
+  .countdown{padding:50px 12px}
+  .count-title{font-size:clamp(32px,10vw,42px);margin-bottom:28px}
+  .count-grid{grid-template-columns:repeat(2,1fr);gap:12px;max-width:340px}
+  .count-item{padding:20px 6px;border-radius:18px}
+  .count-number{font-size:clamp(30px,10vw,38px)}
+  .count-label{font-size:9px;letter-spacing:1px}
+  .collage-wrapper{gap:12px;padding:0 8px}
+  .collage-photo{width:48%;border-radius:14px}
+  .final{min-height:80vh}
+  .final-small{font-size:16px}
+  .final-big{font-size:clamp(22px,6vw,32px)}
+  .footer-text{font-size:24px}
 }
-
 @media(max-width:480px){
-  .section{
-    padding:55px 12px;
+  .section{padding:55px 12px}
+  .lang-switcher{top:10px;right:10px;padding:3px}
+  .lang-btn{padding:6px 11px;font-size:10px}
+  .names{font-size:clamp(38px,13vw,48px)}
+  .date{font-size:15px;letter-spacing:3px}
+  .invitation-text{font-size:17px;line-height:1.75}
+  .calendar-container{
+    max-width:300px;padding:26px 14px 20px;
+    border-radius:20px;
   }
-  .lang-switcher{
-    top:10px;
-    right:10px;
-    padding:3px;
-  }
-  .lang-btn{
-    padding:6px 12px;
-    font-size:10px;
-  }
-  .names{
-    font-size:clamp(38px,13vw,48px);
-  }
-  .date{
-    font-size:15px;
-    letter-spacing:3px;
-  }
-  .invitation-text{
-    font-size:17px;
-    line-height:1.75;
-  }
-  .calendar-box{
-    padding:22px 12px;
-    border-radius:16px;
-  }
-  .calendar-grid{
-    gap:5px;
-  }
-  .day{
-    font-size:12px;
-  }
-  .day-header{
-    font-size:9px;
-  }
-  .direction-btn{
-    margin-bottom:40px;
-    border-radius:14px;
-  }
-  .direction-btn-img{
-    height:170px;
-  }
-  .direction-btn-title{
-    font-size:16px;
-  }
-  .direction-btn-time{
-    font-size:28px;
-  }
-  .count-title{
-    font-size:32px;
-    margin-bottom:22px;
-  }
-  .count-grid{
-    max-width:300px;
-    gap:10px;
-  }
-  .count-item{
-    padding:16px 4px;
-  }
-  .count-number{
-    font-size:28px;
-  }
-  .collage-wrapper{
-    gap:8px;
-  }
-  .collage-photo:first-child{
-    transform:rotate(-2deg);
-  }
-  .collage-photo:last-child{
-    transform:rotate(2deg);
-  }
-  .collage-photo{
-    border-radius:12px;
-  }
-  .final-small{
-    font-size:14px;
-    letter-spacing:1.5px;
-  }
-  .final-big{
-    font-size:22px;
-    line-height:1.6;
-    letter-spacing:1.5px;
-  }
-  .footer-text{
-    font-size:22px;
-  }
+  .ios-month{font-size:15px;margin-bottom:18px}
+  .ios-weekdays{margin-bottom:8px}
+  .ios-weekday{font-size:7.5px}
+  .ios-days{gap:3px}
+  .ios-day{font-size:13px}
+  .ios-day.today::after{width:38px;height:38px}
+  .direction-card{margin-bottom:35px}
+  .direction-card-inner{border-radius:18px}
+  .direction-card-img{height:165px}
+  .direction-card-content{padding:18px 16px 22px}
+  .direction-card-icon{width:34px;height:34px;margin-bottom:10px}
+  .direction-card-title{font-size:16px}
+  .direction-card-time{font-size:26px}
+  .count-title{font-size:32px;margin-bottom:22px}
+  .count-grid{max-width:300px;gap:10px}
+  .count-item{padding:18px 4px}
+  .count-number{font-size:28px}
+  .count-label{font-size:8px}
+  .collage-wrapper{gap:10px}
+  .collage-photo:first-child{transform:rotate(-2deg)}
+  .collage-photo:last-child{transform:rotate(2deg)}
+  .collage-photo{border-radius:12px}
+  .final-small{font-size:14px;letter-spacing:1.5px}
+  .final-big{font-size:22px;line-height:1.6;letter-spacing:1.5px}
+  .footer-text{font-size:22px}
 }
-
 @media(max-width:360px){
-  .count-grid{
-    max-width:260px;
-  }
-  .count-number{
-    font-size:26px;
-  }
-  .count-label{
-    font-size:8px;
-  }
-  .direction-btn-img{
-    height:150px;
-  }
+  .count-grid{max-width:260px}
+  .count-number{font-size:26px}
+  .count-label{font-size:8px}
+  .direction-card-img{height:145px}
+  .calendar-container{max-width:275px;padding:22px 12px 18px}
+  .ios-day{font-size:12px}
+  .ios-day.today::after{width:34px;height:34px}
 }
 </style>
 </head>
 
 <body>
 
+<!-- WEDDING BG -->
+<div class="wedding-bg"></div>
+<div class="floating-icons" id="iconsContainer"></div>
+
 <!-- LANGUAGE -->
 <div class="lang-switcher">
-  <button class="lang-btn active" onclick="switchLang('hy', this)">HY</button>
-  <button class="lang-btn" onclick="switchLang('ru', this)">RU</button>
+  <button class="lang-btn active" onclick="switchLang('hy',this)">HY</button>
+  <button class="lang-btn" onclick="switchLang('ru',this)">RU</button>
 </div>
 
 <!-- HEADER -->
@@ -656,12 +611,13 @@ body{
       Հարսանիքի Հրավեր
     </div>
     <div class="names"
-      data-hy="Հակոբ &amp; Անя"
-      data-ru="Акоп &amp; Аня">
-      Հակոբ &amp; Անյա
+      data-hy="Հակոբ & Անյա"
+      data-ru="Акоп & Аня">
+      Հակոբ & Անյա
     </div>
     <div class="date">17 . 07 . 2026</div>
   </div>
+  <div class="scroll-hint">scroll</div>
 </section>
 
 <!-- INVITATION -->
@@ -674,111 +630,146 @@ body{
     Մենք ընտանիք ենք կազմում և մեծ սիրով հրավիրում ենք Ձեզ
     կիսելու մեր երջանկությունը։
   </div>
+  <div class="rings-divider">
+    <svg viewBox="0 0 60 28" fill="none" stroke="currentColor" stroke-width="1">
+      <circle cx="22" cy="14" r="11" stroke="var(--gold)"/>
+      <circle cx="38" cy="14" r="11" stroke="var(--rose)"/>
+    </svg>
+  </div>
 </section>
 
 <!-- CALENDAR -->
 <section class="section">
-  <div class="calendar-box">
-    <div class="month"
+  <div class="calendar-container">
+    <div class="ios-month"
       data-hy="Հուլիս 2026"
       data-ru="Июль 2026">
       Հուլիս 2026
     </div>
-    <div class="calendar-grid">
-      <div class="day-header">ПН</div>
-      <div class="day-header">ВТ</div>
-      <div class="day-header">СР</div>
-      <div class="day-header">ЧТ</div>
-      <div class="day-header">ПТ</div>
-      <div class="day-header">СБ</div>
-      <div class="day-header">ВС</div>
-      <div class="day empty"></div>
-      <div class="day empty"></div>
-      <div class="day">1</div>
-      <div class="day">2</div>
-      <div class="day">3</div>
-      <div class="day">4</div>
-      <div class="day">5</div>
-      <div class="day">6</div>
-      <div class="day">7</div>
-      <div class="day">8</div>
-      <div class="day">9</div>
-      <div class="day">10</div>
-      <div class="day">11</div>
-      <div class="day">12</div>
-      <div class="day">13</div>
-      <div class="day">14</div>
-      <div class="day">15</div>
-      <div class="day">16</div>
-      <div class="day highlight">17</div>
-      <div class="day">18</div>
-      <div class="day">19</div>
-      <div class="day">20</div>
-      <div class="day">21</div>
-      <div class="day">22</div>
-      <div class="day">23</div>
-      <div class="day">24</div>
-      <div class="day">25</div>
-      <div class="day">26</div>
-      <div class="day">27</div>
-      <div class="day">28</div>
-      <div class="day">29</div>
-      <div class="day">30</div>
-      <div class="day">31</div>
+    <div class="ios-weekdays">
+      <div class="ios-weekday">ԵՐԿ</div>
+      <div class="ios-weekday">ԵՐՔ</div>
+      <div class="ios-weekday">ՉՈՐ</div>
+      <div class="ios-weekday">ՀՆԳ</div>
+      <div class="ios-weekday">ՈՒՐԲ</div>
+      <div class="ios-weekday">ՇԲԹ</div>
+      <div class="ios-weekday">ԿԻՐ</div>
+    </div>
+    <div class="ios-days">
+      <div class="ios-day empty"></div>
+      <div class="ios-day empty"></div>
+      <div class="ios-day"><span>1</span></div>
+      <div class="ios-day"><span>2</span></div>
+      <div class="ios-day"><span>3</span></div>
+      <div class="ios-day"><span>4</span></div>
+      <div class="ios-day"><span>5</span></div>
+      <div class="ios-day"><span>6</span></div>
+      <div class="ios-day"><span>7</span></div>
+      <div class="ios-day"><span>8</span></div>
+      <div class="ios-day"><span>9</span></div>
+      <div class="ios-day"><span>10</span></div>
+      <div class="ios-day"><span>11</span></div>
+      <div class="ios-day"><span>12</span></div>
+      <div class="ios-day"><span>13</span></div>
+      <div class="ios-day"><span>14</span></div>
+      <div class="ios-day"><span>15</span></div>
+      <div class="ios-day"><span>16</span></div>
+      <div class="ios-day today"><span>17</span></div>
+      <div class="ios-day"><span>18</span></div>
+      <div class="ios-day"><span>19</span></div>
+      <div class="ios-day"><span>20</span></div>
+      <div class="ios-day"><span>21</span></div>
+      <div class="ios-day"><span>22</span></div>
+      <div class="ios-day"><span>23</span></div>
+      <div class="ios-day"><span>24</span></div>
+      <div class="ios-day"><span>25</span></div>
+      <div class="ios-day"><span>26</span></div>
+      <div class="ios-day"><span>27</span></div>
+      <div class="ios-day"><span>28</span></div>
+      <div class="ios-day"><span>29</span></div>
+      <div class="ios-day"><span>30</span></div>
+      <div class="ios-day"><span>31</span></div>
     </div>
   </div>
 </section>
 
-<!-- CHURCH -->
+<!-- DIRECTIONS -->
 <section class="section">
-  <a class="direction-btn" href="https://yandex.com/maps/-/CPwo76JC" target="_blank">
-    <img class="direction-btn-img"
-      src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/ab191a26dc1114a03167e42252ef7f8677aa55c8/1700209165720mainImg.jpg"
-      alt="Church">
-    <div class="direction-btn-content">
-      <div class="direction-btn-title"
-        data-hy="Եկեղեցի՝ Սուրբ Երրորդություն"
-        data-ru="Церковь — Святая Троица">
-        Եկեղեցի՝ Սուրբ Երրորդություն
+  <!-- CHURCH -->
+  <div class="direction-card">
+    <a class="direction-card-inner" href="https://yandex.com/maps/-/CPwo76JC" target="_blank">
+      <div class="direction-card-img-wrap">
+        <img class="direction-card-img"
+          src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/ab191a26dc1114a03167e42252ef7f8677aa55c8/1700209165720mainImg.jpg"
+          alt="Church">
+        <div class="direction-card-img-overlay"></div>
+        <div class="direction-card-badge"
+          data-hy="ԵԿԵՂԵՑԻ"
+          data-ru="ЦЕРКОВЬ">
+          ԵԿԵՂԵՑԻ
+        </div>
       </div>
-      <div class="direction-btn-time">15:00</div>
-      <span class="map-btn-label"
-        data-hy="Քարտեզ"
-        data-ru="Карта">
-        Քարտեզ
-      </span>
-    </div>
-  </a>
+      <div class="direction-card-content">
+        <div class="direction-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+            <path d="M12 2v20M2 12h20M7 5l5-3 5 3M9 9h6M9 15h6"/>
+          </svg>
+        </div>
+        <div class="direction-card-title"
+          data-hy="Եկեղեցի՝ Սուրբ Երրորդություն"
+          data-ru="Церковь — Святая Троица">
+          Եկեղեցի՝ Սուրբ Երրորդություն
+        </div>
+        <div class="direction-card-time">15:00</div>
+        <div class="map-btn"><span
+          data-hy="Քարտեզ"
+          data-ru="Карта">Քարտեզ</span></div>
+      </div>
+    </a>
+  </div>
 
-<!-- RESTAURANT -->
-  <a class="direction-btn" href="https://yandex.com/maps/-/CPHaQKNa" target="_blank">
-    <img class="direction-btn-img"
-      src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/ab191a26dc1114a03167e42252ef7f8677aa55c8/182765173_2740209479529041_8741023888127056283_n.jpg"
-      alt="Restaurant">
-    <div class="direction-btn-content">
-      <div class="direction-btn-title"
-        data-hy="Սրահ՝ Հրաշք Այգի"
-        data-ru="Ресторан — Чудесный Сад">
-        Սրահ՝ Հրաշք Այգի
+  <!-- RESTAURANT -->
+  <div class="direction-card">
+    <a class="direction-card-inner" href="https://yandex.com/maps/-/CPHqFMo3" target="_blank">
+      <div class="direction-card-img-wrap">
+        <img class="direction-card-img"
+          src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/ab191a26dc1114a03167e42252ef7f8677aa55c8/182765173_2740209479529041_8741023888127056283_n.jpg"
+          alt="Restaurant">
+        <div class="direction-card-img-overlay"></div>
+        <div class="direction-card-badge"
+          data-hy="ՍՐԱՀ"
+          data-ru="РЕСТОРАН">
+          ՍՐԱՀ
+        </div>
       </div>
-      <div class="direction-btn-time">17:30</div>
-      <span class="map-btn-label"
-        data-hy="Քարտեզ"
-        data-ru="Карта">
-        Քարտեզ
-      </span>
-    </div>
-  </a>
+      <div class="direction-card-content">
+        <div class="direction-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+            <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M9 9h6M9 13h6"/>
+          </svg>
+        </div>
+        <div class="direction-card-title"
+          data-hy="Սրահ՝ Հրաշք Այգի"
+          data-ru="Ресторан — Чудесный Сад">
+          Սրահ՝ Հրաշք Այգի
+        </div>
+        <div class="direction-card-time">17:30</div>
+        <div class="map-btn"><span
+          data-hy="Քարտեզ"
+          data-ru="Карта">Քարտեզ</span></div>
+      </div>
+    </a>
+  </div>
 </section>
 
 <!-- COLLAGE -->
 <section class="section">
   <div class="collage-wrapper">
     <div class="collage-photo">
-      <img src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/7617bfbca30e62f74ca10db162ab343dae72e420/photo_5242604538437509149_y.jpg" alt="Photo 1">
+      <img src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/7617bfbca30e62f74ca10db162ab343dae72e420/photo_5242604538437509149_y.jpg" alt="Couple 1">
     </div>
     <div class="collage-photo">
-      <img src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/7617bfbca30e62f74ca10db162ab343dae72e420/photo_5242604538437509148_y.jpg" alt="Photo 2">
+      <img src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/7617bfbca30e62f74ca10db162ab343dae72e420/photo_5242604538437509148_y.jpg" alt="Couple 2">
     </div>
   </div>
 </section>
@@ -793,35 +784,19 @@ body{
   <div class="count-grid">
     <div class="count-item">
       <div class="count-number" id="days">00</div>
-      <div class="count-label"
-        data-hy="ՕՐ"
-        data-ru="ДНЕЙ">
-        ՕՐ
-      </div>
+      <div class="count-label" data-hy="ՕՐ" data-ru="ДНЕЙ">ՕՐ</div>
     </div>
     <div class="count-item">
       <div class="count-number" id="hours">00</div>
-      <div class="count-label"
-        data-hy="ԺԱՄ"
-        data-ru="ЧАСОВ">
-        ԺԱՄ
-      </div>
+      <div class="count-label" data-hy="ԺԱՄ" data-ru="ЧАСОВ">ԺԱՄ</div>
     </div>
     <div class="count-item">
       <div class="count-number" id="minutes">00</div>
-      <div class="count-label"
-        data-hy="ՐՈՊԵ"
-        data-ru="МИНУТ">
-        ՐՈՊԵ
-      </div>
+      <div class="count-label" data-hy="ՐՈՊԵ" data-ru="МИНУТ">ՐՈՊԵ</div>
     </div>
     <div class="count-item">
       <div class="count-number" id="seconds">00</div>
-      <div class="count-label"
-        data-hy="ՎԱՅՐԿՅԱՆ"
-        data-ru="СЕКУНД">
-        ՎԱՅՐԿՅԱՆ
-      </div>
+      <div class="count-label" data-hy="ՎԱՅՐԿՅԱՆ" data-ru="СЕКУНД">ՎԱՅՐԿՅԱՆ</div>
     </div>
   </div>
 </section>
@@ -847,66 +822,83 @@ body{
 <!-- FOOTER -->
 <div class="footer">
   <div class="footer-text"
-    data-hy="Հակոբ &amp; Անյա"
-    data-ru="Акоп &amp; Аня">
-    Հակոբ &amp; Անյա
+    data-hy="Հակոբ & Անյա"
+    data-ru="Акоп & Аня">
+    Հակոբ & Անյա
   </div>
 </div>
 
 <script>
 /* LANGUAGE */
-function switchLang(lang, btn){
-  document.querySelectorAll('.lang-btn').forEach(b=>{
-    b.classList.remove('active');
-  });
+function switchLang(lang,btn){
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
-
   document.querySelectorAll('[data-hy]').forEach(el=>{
-    if(lang === 'hy'){
-      el.innerHTML = el.dataset.hy;
-    } else {
-      el.innerHTML = el.dataset.ru;
-    }
+    el.innerHTML=lang==='hy'?el.dataset.hy:el.dataset.ru;
   });
 }
 
 /* COUNTDOWN */
-const weddingDate = new Date("2026-07-17T15:00:00").getTime();
-
+const weddingDate=new Date("2026-07-17T15:00:00").getTime();
 function updateCountdown(){
-  const now = new Date().getTime();
-  const distance = weddingDate - now;
-
-  const d = Math.floor(distance / (1000*60*60*24));
-  const h = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-  const m = Math.floor((distance % (1000*60*60)) / (1000*60));
-  const s = Math.floor((distance % (1000*60)) / 1000);
-
-  document.getElementById("days").innerHTML = d;
-  document.getElementById("hours").innerHTML = h;
-  document.getElementById("minutes").innerHTML = m;
-  document.getElementById("seconds").innerHTML = s;
+  const now=new Date().getTime();
+  const d=weddingDate-now;
+  document.getElementById("days").innerHTML=Math.floor(d/(1e3*60*60*24));
+  document.getElementById("hours").innerHTML=Math.floor((d%(1e3*60*60*24))/(1e3*60*60));
+  document.getElementById("minutes").innerHTML=Math.floor((d%(1e3*60*60))/(1e3*60));
+  document.getElementById("seconds").innerHTML=Math.floor((d%(1e3*60))/1e3);
 }
-
 updateCountdown();
-setInterval(updateCountdown, 1000);
+setInterval(updateCountdown,1e3);
+
+/* FLOATING WEDDING ICONS */
+const icons=[
+  'M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z',
+  'M17.5 6c-1.5 0-2.8.8-3.5 2-.7-1.2-2-2-3.5-2-2.5 0-4.5 2-4.5 4.5 0 3.5 8 9.5 8 9.5s8-6 8-9.5C22 8 20 6 17.5 6z',
+  'M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z',
+  'M6 2h12v2H6zM8 4v16h8V4H8zM10 6h4M10 9h4M10 12h4'
+];
+function createIcon(){
+  const c=document.getElementById('iconsContainer');
+  const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  svg.setAttribute('viewBox','0 0 24 24');
+  const s=Math.random()*14+10;
+  svg.setAttribute('width',s);
+  svg.setAttribute('height',s);
+  svg.classList.add('float-icon');
+  svg.style.left=Math.random()*100+'%';
+  svg.style.animationDuration=(Math.random()*18+18)+'s';
+  svg.style.animationDelay=(Math.random()*4)+'s';
+  const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+  p.setAttribute('d',icons[Math.floor(Math.random()*icons.length)]);
+  const colors=['rgba(212,165,154,.2)','rgba(201,168,124,.18)','rgba(240,213,200,.25)','rgba(190,140,160,.18)'];
+  p.setAttribute('fill',colors[Math.floor(Math.random()*colors.length)]);
+  svg.appendChild(p);
+  c.appendChild(svg);
+  setTimeout(()=>svg.remove(),40000);
+}
+setInterval(createIcon,2200);
+for(let i=0;i<4;i++) setTimeout(createIcon,i*500);
 
 /* SCROLL ANIMATIONS */
-const observerOptions = {
-  threshold: 0.15,
-  rootMargin: '0px 0px -40px 0px'
-};
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting) entry.target.classList.add('visible');
+  });
+},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.invitation-text').forEach(el=>observer.observe(el));
 
-const observer = new IntersectionObserver((entries)=>{
+/* DIRECTION CARDS ANIMATION */
+const cardObserver=new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){
-      entry.target.classList.add('visible');
+      entry.target.style.animationPlayState='running';
     }
   });
-}, observerOptions);
-
-document.querySelectorAll('.invitation-text, .direction-card').forEach(el=>{
-  observer.observe(el);
+},{threshold:.2});
+document.querySelectorAll('.direction-card-inner').forEach(el=>{
+  el.style.animationPlayState='paused';
+  cardObserver.observe(el);
 });
 </script>
 
