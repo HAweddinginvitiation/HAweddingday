@@ -289,6 +289,9 @@ body{
   width:100%;height:210px;object-fit:cover;display:block;
   transition:transform .7s ease, filter .4s ease;
 }
+.direction-card-img-large{
+  height:320px;
+}
 .direction-card-inner:hover .direction-card-img{
   transform:scale(1.06);
   filter:saturate(1.05);
@@ -522,6 +525,7 @@ body{
   .direction-card{margin-bottom:40px}
   .direction-card-inner{border-radius:20px}
   .direction-card-img{height:185px}
+  .direction-card-img-large{height:280px}
   .direction-card-badge{opacity:1;transform:translateX(0)}
   .direction-card-icon{width:36px;height:36px;margin-bottom:10px}
   .direction-card-title{font-size:17px}
@@ -559,6 +563,7 @@ body{
   .direction-card{margin-bottom:35px}
   .direction-card-inner{border-radius:18px}
   .direction-card-img{height:165px}
+  .direction-card-img-large{height:240px}
   .direction-card-content{padding:18px 16px 22px}
   .direction-card-icon{width:34px;height:34px;margin-bottom:10px}
   .direction-card-title{font-size:16px}
@@ -581,6 +586,7 @@ body{
   .count-number{font-size:26px}
   .count-label{font-size:8px}
   .direction-card-img{height:145px}
+  .direction-card-img-large{height:210px}
   .calendar-container{max-width:275px;padding:22px 12px 18px}
   .ios-day{font-size:12px}
   .ios-day.today::after{width:34px;height:34px}
@@ -695,6 +701,39 @@ body{
 
 <!-- DIRECTIONS -->
 <section class="section">
+  <!-- BRIDE'S HOUSE (NEW FIRST DIRECTION) -->
+  <div class="direction-card">
+    <a class="direction-card-inner" href="https://yandex.ru/maps/-/CTBcyNYS" target="_blank">
+      <div class="direction-card-img-wrap">
+        <img class="direction-card-img direction-card-img-large"
+          src="https://raw.githubusercontent.com/HAweddinginvitiation/HAweddingday/9c56860229b34f0b2741ed6bbf152139138ae3a6/photo_5377597396365286409_y.jpg"
+          alt="Bride's House">
+        <div class="direction-card-img-overlay"></div>
+        <div class="direction-card-badge"
+          data-hy="ՀԱՐՍԻ ՏՈՒՆ"
+          data-ru="ДОМ НЕВЕСТЫ">
+          ՀԱՐՍԻ ՏՈՒՆ
+        </div>
+      </div>
+      <div class="direction-card-content">
+        <div class="direction-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+            <path d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3v-6h6v6h3a1 1 0 001-1V10"/>
+          </svg>
+        </div>
+        <div class="direction-card-title"
+          data-hy="Հարսի տուն"
+          data-ru="Дом невесты">
+          Հարսի տուն
+        </div>
+        <div class="direction-card-time">12:30</div>
+        <div class="map-btn"><span
+          data-hy="Քարտեզ"
+          data-ru="Карта">Քարտեզ</span></div>
+      </div>
+    </a>
+  </div>
+
   <!-- CHURCH -->
   <div class="direction-card">
     <a class="direction-card-inner" href="https://yandex.com/maps/-/CPwo76JC" target="_blank">
@@ -904,4 +943,3 @@ document.querySelectorAll('.direction-card-inner').forEach(el=>{
 
 </body>
 </html>
-
